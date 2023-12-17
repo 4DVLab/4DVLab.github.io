@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="index, follow">
+
+    <title>4DV LAB</title>
+    <meta name="description" content="">
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="/css/main.css" rel='stylesheet' type='text/css'>
+
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet' type='text/css'>
+
+    <!-- Favicon -->
+    <!-- <link rel="shortcut icon" href="/imgs/logo.png"> -->
+
+
+    <style type="text/css">
+        .container-fluid .items {
+            border: 3px solid #ffffff;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .card {
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .card img {
+            width: auto;
+            height: auto;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            position: relative;
+        }
+
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .card-content {
+            height: 30px;
+            width: 1000px;
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top" style="background-color: black;">
+    <div class="navigation"></div>
+
+    <div class="news top-container" style="font-size: 16px">
+        <div class="container-fluid">
+            <header>
+                <h1><font color="white">Datasets</font></h1>
+                <hr />
+            </header>
+            <div class="row">
+                
+                <div class="col-lg-6 col-md-6" style="cursor: pointer;" onclick="window.open('/project_page/HuCenLife.html')">
+                    <div class="items text-center">
+                        <div class="card">
+                            <img src="/imgs/paper_fig/hucenlife.png" />
+                        </div>
+                        <div class="card-title"><font color="white"> HuCenLife Dataset</font> </div>
+                        <div class="card-content">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6" style="cursor: pointer;" onclick="window.open('STCrowd/index.html')">
+                    <div class="items text-center">
+                        <div class="card">
+                            <img src="/imgs/dataset_img/stcrowd.jpg" />
+                        </div>
+                        <div class="card-title"><font color="white">STCrowd Dataset</font></div>
+                        <div class="card-content">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6" style="cursor: pointer;" onclick="window.open('/project_page/LIPD.html')">
+                    <div class="items text-center">
+                        <div class="card">
+                            <img src="/project_page/static/LIPD_pic/teaser.png" />
+                        </div>
+                        <div class="card-title"><font color="white">LIPD Dataset</font></div>
+                        <div class="card-content">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/all.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".footer").load("/common/footer.html");
+            $(".navigation").load("/common/navigation.html");
+        });
+    </script>
+
+</body>
+
+</html>
