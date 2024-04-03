@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="Fusing point cloud and image features to better align visual features with semantic features.">
+  <meta name="keywords" content="zero-shot point cloud segmentation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LaserHuman: Language-guided Scene-aware Human Motion Generation in Free Environment</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+  
+
+  <!-- Menu bar, can switch to other work or homepage -->
+
+  <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav> -->
+
+
+  <!-- Title, author and some icon(paper, code, video, etc...) -->
+  <section class="hero">
+    
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">LaserHuman: Language-guided Scene-aware Human Motion Generation in Free Environment</h1>
+            
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                
+                <a href="https://scholar.google.com/citations?user=KAjruhYAAAAJ&hl=zh-CN&oi=sra">Peishan Cong</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <!-- <a href="https://utkarshsinha.com">Qi Jiang</a><sup>1</sup>,</span> -->
+                Ziyi Wang<sup>1</sup>,</span>
+              
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?user=Uq2DuzkAAAAJ&hl=zh-CN">Zhiyang Dou</a><sup>2</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?hl=zh-CN&user=6QfC8kEAAAAJ">
+                  Yiming Ren</a><sup>1</sup>,
+                </span>
+                <p>
+                <span class="author-block">
+                  Wei Yin</a><sup>3</sup>,
+                </span>
+                <span class="author-block">
+                  Kai Cheng</a><sup>4</sup>,
+                </span>
+                <span class="author-block">
+                  Yujing Sun</a><sup>5</sup>,
+                </span>
+                <span class="author-block">
+                  Xiaoxiao Long</a><sup>5</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="https://xingezhu.me/aboutme.html">Xinge Zhu</a><sup>6</sup>,
+                </span>
+                <span class="author-block">
+                  <a href="http://yuexinma.me">Yuexin Ma</a><sup>1</sup>,
+                </span>
+              </p>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>ShanghaiTech University,</span>
+              <span class="author-block"><sup>2</sup> University of Pennsylvania</span>
+              <p> <span class="author-block"><sup>3</sup>University of Adelaide</span>
+                <span class="author-block"><sup>4</sup>University of Science and Technology of China</span>
+              </p>
+              <span class="author-block"><sup>5</sup>The University of Hong Kong</span>
+              <span class="author-block"><sup>6</sup>The Chinese University of Hong Kong</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2307.14392.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2307.14392" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                
+                <!-- Video Link. -->
+                <!-- <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span> -->
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/4DVLab/LaserHuman"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/4DVLab/LaserHuman"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+              </div>
+              <section class="hero teaser">
+                <div class="container is-max-desktop">
+                  <div class="hero-body">
+                    <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
+                    <source src="./static/teaser.pdf"
+                            type="video/mp4">
+                  </video> -->
+                    <img src="./static/laserhuman_pics/page1.gif" style="display: block; margin: 0 auto; ">
+                      </h2>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Language-guided scene-aware human motion generation has great significance for entertainment and robotics. In response to the limitations of existing datasets, we introduce LaserHuman, a pioneering dataset engineered to revolutionize Scene-Text-to-Motion research. LaserHuman stands out with its inclusion of genuine human motions within 3D environments, unbounded free-form natural language descriptions, a blend of indoor and outdoor scenarios, and dynamic, ever-changing scenes. 
+Diverse modalities of capture data and rich annotations present great opportunities for the research of conditional motion generation, and can also facilitate the development of real-life applications.
+Moreover, to generate semantically consistent and physically plausible human motions, we propose a multi-conditional diffusion model, which is simple but effective, achieving state-of-the-art performance on existing datasets.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+  </section>
+  <!-- teaser part -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/teaser.pdf"
+                type="video/mp4">
+      </video> -->
+        <img src="./static/laserhuman_pics/teasor.png" style="display: block; margin: 0 auto; ">
+        <b>Figure 1. LaserHuman consists of large-scale sequences of rich human motions and abundant human interactions captured in various real scenarios with free-form language descriptions, providing valuable data for conditioned human motion generation. We demonstrate two scenarios, where colored humans are annotated targets and white humans are interacted humans in the dynamic scene. The human mesh color from light to dark represents an increase in timing.
+          </h2>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Method. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <h2 class="title is-3">Dataset</h2>
+          <!-- <div class="container_imgleft"> -->
+            
+          <img src="./static/laserhuman_pics/dataset.gif" >
+          <!-- style="width: 350px; height: 250px;"> -->
+          
+          <!-- <img src="./static/laserhuman_pics/seg_vis.png" style="display: block; margin: 0 auto; "> -->
+          <div class="content has-text-justified">
+
+            <p>
+              <b>Figure 2.LaserHuman contains diverse scenarios, rich interactions, and
+                abundant free-form language descriptions.
+            </p>
+          </div>
+          </div>
+        </div>
+      </div>
+      <!--/ Method. -->
+    </div>
+  </section>
+
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Method. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Genertation results.</h2>
+          <img src="./static/laserhuman_pics/result2.gif" style="display: block; margin: 0 auto; ">
+          <img src="./static/laserhuman_pics/result3.gif" style="display: block; margin: 0 auto; ">
+          <div class="content has-text-justified">
+            <p>
+              <b>Figure 3. Generation results on LaserHuman. 
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Method. -->
+    </div>
+  </section>
+
+
+  <!-- show bibtex -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{cong2024laserhuman,
+        title={LaserHuman: Language-guided scene-aware human motion generation in free environment},
+        author={Cong, Peishan and Dou, Ziyi WangZhiyang and Ren, Yiming and Yin, Wei and Cheng, Kai and Sun, Yujing and Long, Xiaoxiao and Zhu, Xinge and Ma, Yuexin},
+        journal={arXiv preprint arXiv:2403.13307},
+        year={2024}
+      }
+      
+}</code></pre>
+    </div>
+  </section>
+
+
+  <!-- show license -->
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <!-- <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a> -->
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              Website source code based on the <a href="https://nerfies.github.io">Nerfies</a> project page.
+              If you want to reuse their <a href="https://github.com/nerfies/nerfies.github.io">source code</a> , please
+              credit them appropriately.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
