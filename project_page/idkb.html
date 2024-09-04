@@ -293,25 +293,34 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Benefits of Driving Knowledge for Downstream Autonomous Driving Tasks</h2>
+        <h2 class="title is-3">Significant Improvement through Fine-Tuning</h2>
+        <img src="./static/IDKB_sources/images/finetune.png" style="display: block; margin: 0 auto; ">
+        <div class="content has-text-justified">
+          <p>We fine-tuned four LVLMs, each with a different visual encoder or LLM, to assess the impact of our structured driving knowledge data.</p>
+          <p>As shown in the table, these fine-tuned models achieved <strong>IDKB scores</strong> comparable to larger proprietary models. <strong>MiniCPM-Llama3-V2.5</strong> doubled its Test Data Score, underscoring the data's value in mastering driving laws, rules, and special situations.</p>
+          <p>The improvement in the <strong>Test Road Score</strong> reflects a better grasp of traffic regulations, reinforcing our dataset's role in advancing safer and more reliable autonomous driving systems.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Driving Knowledge Boosts Downstream Autonomous Driving Tasks</h2>
         <img src="./static/IDKB_sources/images/planning.png" style="display: block; margin: 0 auto; ">
         <div class="content has-text-justified">
-          <p>
-            We showcase the application of the QwenVL-chat model, fine-tuned on the <strong>IDKB dataset</strong>, for the planning task using the <strong>nuScenes dataset</strong>. This demonstrates how integrating driving knowledge data can significantly enhance performance in downstream tasks.
-        </p>
-        <p>
-            For inference, we follow a prompt method similar to <strong>DriveVLM</strong>. The LVLM first identifies the traffic signs on the road and then receives key information to predict the trajectory for the next three seconds.
-        </p>
-        <p>
-            The <strong>nuScenes planning task</strong> uses imitation learning from human planning data, while the IDKB dataset aligns with human driving knowledge acquisition, allowing the fine-tuned LVLM to better understand traffic laws, regulations, and driving skills, resulting in safer and more rational route planning.
-        </p>
-        <p>
-            Our results confirm this:
+          <p>We applied the QwenVL-chat model, fine-tuned on the <strong>IDKB dataset</strong>, to the planning task using the <strong>nuScenes dataset</strong>, demonstrating how driving knowledge can boost downstream task performance.</p>
+          <p>Using a prompt-based method akin to <strong>DriveVLM</strong>, the model identifies traffic signs and predicts the next three seconds' trajectory.</p>
+          <p>The <strong>IDKB dataset</strong> aligns with human driving knowledge acquisition, enabling the model to better understand traffic laws and plan safer routes.</p>
+          <p>Our results confirm this:
             <ul>
-                <li>The model fine-tuned with IDKB data shows a <strong>32% reduction</strong> in average L2 distance and a <strong>65% drop</strong> in collision metrics, indicating improved safety.</li>
-                <li>The model successfully identifies the <strong>'ROAD WORK AHEAD'</strong> sign, decelerates appropriately, and plans a safer trajectory, as shown by the decreasing offset between frames.</li>
+              <li><strong>32% reduction</strong> in average L2 distance and a <strong>65% drop</strong> in collision metrics, reflecting improved safety.</li>
+              <li>The model correctly identifies the <strong>'ROAD WORK AHEAD'</strong> sign, decelerates, and plans a safer trajectory, evidenced by the decreasing offset between frames.</li>
             </ul>
-        </p>
+          </p>
         </div>
       </div>
     </div>
