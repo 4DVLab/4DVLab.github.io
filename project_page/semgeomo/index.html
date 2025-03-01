@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="Fusing point cloud and image features to better align visual features with semantic features.">
+  <meta name="keywords" content="zero-shot point cloud segmentation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SemGeoMo: Dynamic Contextual Human Motion Generation with Semantic and Geometric Guidance</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+  
+
+  <!-- Menu bar, can switch to other work or homepage -->
+
+  <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav> -->
+
+
+  <!-- Title, author and some icon(paper, code, video, etc...) -->
+  <section class="hero">
+    
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">SemGeoMo: Dynamic Contextual Human Motion Generation
+                with Semantic and Geometric Guidance</h1>
+            
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://coralemon.github.io/">
+                Peishan Cong</a><sup>1,2</sup>,</span>
+              <span class="author-block">
+                Ziyi Wang<sup>1</sup>,</span>
+                <span class="author-block">
+                  <a href="http://yuexinma.me">Yuexin Ma</a><sup>1</sup>,</span>
+                <span class="author-block">
+                  <a href="https://xyue.io/">
+                    Xiangyu Yue</a><sup>2</sup>,</span>
+              </p>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>ShanghaiTech University,</span>
+              <span class="author-block"><sup>2</sup>The University of Hong Kong</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2403.13307.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2403.13307.pdf" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span> -->
+                
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/4DVLab/SemGeoMo.git"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+   <!-- teaser part -->
+   <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/teaser.pdf"
+                type="video/mp4">
+      </video> -->
+      <img src="teasor.png" style="display: block; margin: 0 auto; width: 70%;">
+        <b>Given sequential point clouds of interactive targets, SemGeoMo generates realistic and high-quality human interactive motions along with corresponding textual descriptions. By leveraging
+            both semantic and geometric guidance, our method ensures the semantic coherence and geometric accuracy of the generated results.
+          </h2>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+                Generating reasonable and high-quality human interactive motions in a given dynamic environment is crucial for understanding, modeling, transferring, and applying 
+                human behaviors to both virtual and physical robots. In this paper, we introduce an effective method, SemGeoMo, for dynamic contextual human motion generation, which fully 
+                leverages the text-affordance-joint multi-level semantic and geometric guidance in the generation process, improving the semantic rationality and geometric correctness of 
+                generative motions. Our method achieves state-of-the-art performance on three datasets and demonstrates superior generalization capability for diverse interaction scenarios.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Method. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <h2 class="title is-3">Method</h2>
+          <!-- <div class="container_imgleft"> -->
+            
+          <img src="method.png">
+          
+          <!-- <img src="./static/pics/seg_vis.png" style="display: block; margin: 0 auto; "> -->
+          <div class="content has-text-justified">
+
+            <p>
+              <b>The pipeline of our two-stage framework. LLM Annotator provides the semantic guidance. SemGeo Hierarchical Guidance
+                Generation takes textual information and sequential point cloud as condition and generate affordance-level and joint-level guidance. Then
+                SemGeo-guided Motion Generation utlizes semantic and geometric information to generate responsive human motion.
+            </p>
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+      <!--/ Method. -->
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- vis. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Visualization on comparison results.</h2>
+          <video autoplay loop muted playsinline width="100%">
+            <source src="comparison.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="content has-text-justified">
+          </div>
+        </div>
+      </div>
+      <!--/ vis. -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- vis. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Visualization on more results.</h2>
+          <video autoplay loop muted playsinline width="100%">
+            <source src="more.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="content has-text-justified">
+          </div>
+        </div>
+      </div>
+      <!--/ vis. -->
+    </div>
+  </section>
+
+      </div>
+
+  </div>
+</div>
+</div>
+</section>
+
+  <!-- show bibtex -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{cong2024laserhuman,
+        title={LaserHuman: Language-guided scene-aware human motion generation in free environment},
+        author={Cong, Peishan and Dou, Ziyi WangZhiyang and Ren, Yiming and Yin, Wei and Cheng, Kai and Sun, Yujing and Long, Xiaoxiao and Zhu, Xinge and Ma, Yuexin},
+        journal={arXiv preprint arXiv:2403.13307},
+        year={2024}
+      }
+      
+}</code></pre>
+    </div>
+  </section>
+
+
+  <!-- show license -->
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <!-- <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a> -->
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              Website source code based on the <a href="https://nerfies.github.io">Nerfies</a> project page.
+              If you want to reuse their <a href="https://github.com/nerfies/nerfies.github.io">source code</a> , please
+              credit them appropriately.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
