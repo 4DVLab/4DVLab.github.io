@@ -100,8 +100,9 @@
               <span class="author-block">
                 <a href="https://coralemon.github.io/">
                 Peishan Cong</a><sup>1,2</sup>,</span>
-              <span class="author-block">
-                Ziyi Wang<sup>1</sup>,</span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com.sg/citations?hl=id&user=1zhhVjAAAAAJ&view_op=list_works&sortby=title">
+                  Ziyi Wang</a><sup>1</sup>,</span>
                 <span class="author-block">
                   <a href="http://yuexinma.me">Yuexin Ma</a><sup>1</sup>,</span>
                 <span class="author-block">
@@ -195,6 +196,22 @@
   </section>
 
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+<iframe width="780" height="450" src="https://www.youtube.com/embed/GLXFFQjrcAU " frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+  </div>
+</div>
+</div>
+</section>
+
+
+
+
   <section class="section">
     <div class="container is-max-desktop">
       <!-- Method. -->
@@ -225,59 +242,98 @@
 
   <section class="section">
     <div class="container is-max-desktop">
-      <!-- vis. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Visualization on comparison results.</h2>
-          <video autoplay loop muted playsinline width="100%">
-            <source src="comparison.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <div class="content has-text-justified">
-          </div>
+        <!-- vis. -->
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3"><strong>Visualization on comparison results.</strong></h2>
+                
+                <div class="grid-container">
+                    <!-- Row 1: Clothesstand -->
+                    <div class="grid-title-left"><strong>A person pulls the clothesstand and sets it back down.</strong></div>
+                    <div class="grid-title"></div>
+                    <div class="grid-title"></div>
+                    <div class="grid-title"></div>
+                    
+                    <img src="gif/ours/sub16_clothesstand_009.gif" alt="Comparison 1">
+                    <img src="gif/chois/sub16_clothesstand_009.gif" alt="Comparison 2">
+                    <img src="gif/mdm_pc/sub16_clothesstand_009.gif" alt="Comparison 3">
+                    <img src="gif/omomo/sub16_clothesstand_009.gif" alt="Comparison 4">
+
+                    <!-- Row 2: Plastic Box -->
+                    <div class="grid-title-left"><strong>A person lifts the plastic box, moves it, and puts it down.</strong></div>
+                    <div class="grid-title"></div>
+                    <div class="grid-title"></div>
+                    <div class="grid-title"></div>
+
+                    <img src="gif/ours/sub16_plasticbox_009.gif" alt="Comparison 5">
+                    <img src="gif/chois/sub16_plasticbox_009.gif" alt="Comparison 6">
+                    <img src="gif/mdm_pc/sub16_plasticbox_009.gif" alt="Comparison 7">
+                    <img src="gif/omomo/sub16_plasticbox_009.gif" alt="Comparison 8">
+
+                    <!-- Row 3: Trashcan -->
+                    <div class="grid-title-left"><strong>A person lifts the trashcan and moves it.</strong></div>
+                    <div class="grid-title"></div>
+                    <div class="grid-title"></div>
+                    <div class="grid-title"></div>
+
+                    <img src="gif/ours/sub16_trashcan_000.gif" alt="Comparison 9">
+                    <img src="gif/chois/sub16_trashcan_000.gif" alt="Comparison 10">
+                    <img src="gif/mdm_pc/sub16_trashcan_000.gif" alt="Comparison 11">
+                    <img src="gif/omomo/sub16_trashcan_000.gif" alt="Comparison 12">
+
+                    <!-- Labels Below Last Row -->
+                    <div class="grid-label"><strong>Ours</strong></div>
+                    <div class="grid-label"><strong>CHOIS</strong></div>
+                    <div class="grid-label"><strong>MDM-PC</strong></div>
+                    <div class="grid-label"><strong>OMOMO</strong></div>
+                </div>
+            </div>
         </div>
-      </div>
-      <!--/ vis. -->
+        <!--/ vis. -->
     </div>
   </section>
 
-  <section class="section">
-    <div class="container is-max-desktop">
-      <!-- vis. -->
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Visualization on more results.</h2>
-          <video autoplay loop muted playsinline width="100%">
-            <source src="more.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <div class="content has-text-justified">
-          </div>
-        </div>
-      </div>
-      <!--/ vis. -->
-    </div>
-  </section>
+  <style>
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 2px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .grid-container img {
+        width: 100%;
+        height: auto;
+        border-radius: 2px;
+    }
+    .grid-title {
+        grid-column: span 4;
+        font-weight: bold;
+        margin-bottom: 2px;
+    }
+    .grid-title-left {
+        grid-column: span 4;
+        font-weight: bold;
+        text-align: left;
+        margin-bottom: 2px;
+    }
+    .grid-label {
+        font-weight: bold;
+        margin-top: 2px;
+    }
+</style>
 
-      </div>
 
-  </div>
-</div>
-</div>
-</section>
+
 
   <!-- show bibtex -->
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>@article{cong2024laserhuman,
-        title={LaserHuman: Language-guided scene-aware human motion generation in free environment},
-        author={Cong, Peishan and Dou, Ziyi WangZhiyang and Ren, Yiming and Yin, Wei and Cheng, Kai and Sun, Yujing and Long, Xiaoxiao and Zhu, Xinge and Ma, Yuexin},
-        journal={arXiv preprint arXiv:2403.13307},
-        year={2024}
-      }
-      
-}</code></pre>
+      <pre><code>
+xxx
+      </code></pre>
     </div>
   </section>
 
@@ -286,13 +342,6 @@
   <footer class="footer">
     <div class="container">
       <div class="content has-text-centered">
-        <!-- <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a> -->
       </div>
       <div class="columns is-centered">
         <div class="column is-8">
