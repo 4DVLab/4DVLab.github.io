@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- <meta name="description"
+    content="Fusing point cloud and image features to better align visual features with semantic features.">
+  <meta name="keywords" content="zero-shot point cloud segmentation"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LiveHPS++: Robust and Coherent Motion Capture in Dynamic Free Environment</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <!-- Menu bar, can switch to other work or homepage -->
+
+  <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav> -->
+
+
+  <!-- Title, author and some icon(paper, code, video, etc...) -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">LiveHPS++: Robust and Coherent Motion Capture in Dynamic Free Environment</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                
+                <a href="https://ren-ym.github.io/">Yiming Ren</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="">Xiao Han</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="">Yichen Yao</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=W3G5kZEAAAAJ&hl=zh-CN&oi=ao">Xiaoxiao Long</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://yujingsun.github.io/">Yujing Sun</a><sup>2,*</sup>,
+              </span>
+              <span class="author-block">
+                <a href="http://yuexinma.me">Yuexin Ma</a><sup>1,*</sup>,
+              </span>
+              </p>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">ShanghaiTech University<sup>1</sup>,</span>
+              <span class="author-block">The University of Hong Kong<sup>2</sup></span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2407.09833.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2407.09833" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/4DVLab/LiveHPS2"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a href="https://drive.google.com/file/d/1qWxZzYqeMApy2ZEYA4894Y-rQA6znn7d/view?usp=drive_link"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- teaser part -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/teaser.pdf"
+                type="video/mp4">
+      </video> -->
+        <img src="./static/Livehps++_pic/teaser.png" style="display: block; margin: 0 auto; ">
+        <b>Figure 1. Visualization of the motion capture performance of LiveHPS++ in a real-time captured scenario with complex human-object interaction. The left exhibits images for reference, the middle shows the noised point clouds (top) and our corresponding mesh model results (bottom). We zoom in some cases on the right for clearer demonstration, where point clouds are drawn in white.
+          </h2>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              LiDAR-based human motion capture has garnered significant interest in recent years for its practicability in large-scale and unconstrained environments. However, most methods rely on cleanly segmented human point clouds as input, the accuracy and smoothness of their motion results are compromised when faced with noisy data, rendering them unsuitable for practical applications.
+To address these limitations and enhance the robustness and precision of motion capture with noise interference, we introduce LiveHPS++, an innovative and effective solution based on a single LiDAR system. Benefiting from three meticulously designed modules, our method can learn dynamic and kinematic features from human movements, and further enable the precise capture of coherent human motions in open settings, making it highly applicable to real-world scenarios.
+Through extensive experiments, LiveHPS++ has proven to significantly surpass existing state-of-the-art methods across various datasets, establishing a new benchmark in the field.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Method. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <h2 class="title is-3">Method</h2>
+          <!-- <div class="container_imgleft"> -->
+            
+          <img src="./static/Livehps++_pic/pipeline.png">
+          
+          <!-- <img src="./static/pics/seg_vis.png" style="display: block; margin: 0 auto; "> -->
+          <div class="content has-text-justified">
+
+            <p>
+              <b>The pipeline of LiveHPS++. It consists of three primary modules, including a trajectory-guided body tracker to predict the human joint and translation, a noise-insensitive velocity predictor to regress the velocity, and the kinematic-aware pose optimizer to enhance the accuracy and coherence of results. Finally, we use SMPL solver to regress the parameters of human poses and shape. Detailed network structure of three modules is also shown under the upper pipeline.
+            </p>
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+      <!--/ Method. -->
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Method. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <h2 class="title is-3">Dataset</h2>
+          <!-- <div class="container_imgleft"> -->
+            
+          <img src="./static/Livehps++_pic/dataset.png">
+          
+          <!-- <img src="./static/pics/seg_vis.png" style="display: block; margin: 0 auto; "> -->
+          <div class="content has-text-justified">
+
+            <p>
+              <b>The NoiseMotion dataset simulation pipeline, integrating dynamic human motion and static object noise to simulate real-world human-object interactions.
+            </p>
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+      <!--/ Method. -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Method. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Dataset Struture.</h2>
+
+<h3 id="title is-3" style="text-align:left;font-size: larger" ><b>Dataset file structure</b></h3>
+<pre style="display: block; border: 1px solid #ccc; border-radius: 4px; text-align:left">
+NoiseMotion
+|── surreal
+|   |── pc_1 (View-1)
+|   |   |── train
+|   |   |   |── run1
+|   |   |   |   |── 01_01.pkl
+|   |   |   |   |── 01_02.pkl
+|   |   |   |   |── ...
+|   |   |—— test
+|   |   |   |── run1
+|   |   |   |   |── 03_01.pkl
+|   |   |   |   |── 03_02.pkl
+|   |   |   |   |── ...
+|   |── pc_2 (View-2)
+|   |── pc_3 (View-3)
+</pre>
+
+<h4 id="specification" style="text-align:left"><b>Specification</b></h4>
+<ol style="text-align:left ;margin-left:40px">
+  <li>Point clouds, ground-truth information are stored in xx_xx.pkl. Use <code>np.load(file_path, allow_pickle=True)</code> to load the file.</li>
+  <li>We provide point cloud data from three perspectives at the same time.</li>
+  <li>The all data is 10 fps.</li>
+</ol>
+<br>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Method. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3"> Quantitative comparisons</h2>
+          <img src="./static/Livehps++_pic/cp_rs.png">
+          <div class="content has-text-justified">
+          </div>
+        </div>
+      </div>
+      <!--/ Method. -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Method. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">The real-time results of LiveHPS++</h2>
+          <video width="1920" height="1080" controls>
+            <source src="./static/Livehps++_mv/single_demo.m4v" type="video/mp4">
+          </video>
+          <video width="1920" height="1080" controls>
+            <source src="./static/Livehps++_mv/multi_demo.m4v" type="video/mp4">
+          </video>
+          <video width="1920" height="1080" controls>
+            <source src="./static/Livehps++_mv/multi_demo2.m4v" type="video/mp4">
+          </video>
+          <video width="1920" height="1080" controls>
+            <source src="./static/Livehps++_mv/multi_demo3.m4v" type="video/mp4">
+          </video>
+          <div class="content has-text-justified">
+            <p>
+          
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Method. -->
+    </div>
+  </section>
+
+
+  <!-- show bibtex -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{ren2024livehps++,
+  title={LiveHPS++: Robust and Coherent Motion Capture in Dynamic Free Environment},
+  author={Ren, Yiming and Han, Xiao and Yao, Yichen and Long, Xiaoxiao and Sun, Yujing and Ma, Yuexin},
+  journal={arXiv preprint arXiv:2407.09833},
+  year={2024}
+}
+      }
+</code></pre>
+    </div>
+  </section>
+
+
+  <!-- show license -->
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <!-- <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a> -->
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              Website source code based on the <a href="https://nerfies.github.io">Nerfies</a> project page.
+              If you want to reuse their <a href="https://github.com/nerfies/nerfies.github.io">source code</a> , please
+              credit them appropriately.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

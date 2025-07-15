@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="The first large-scale vision-language dataset dedicated to professional driving knowledge and experience.">
+  <meta name="keywords" content="IDKB dataset">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IDKB dataset</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/IDKB_sources/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!-- Menu bar, can switch to other work or homepage -->
+
+<!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav> -->
+
+
+<!-- Title, author and some icon(paper, code, video, etc...) -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Can LVLMs Obtain a Driver's License? A Benchmark Towards Reliable AGI for Autonomous Driving</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="http://yuhanglu2000.github.io">Yuhang Lu</a><sup>1,*</sup>,
+            <span class="author-block">
+              Yichen Yao<sup>1,*</sup>,</span>
+              <span class="author-block">
+                Jiadong Tu<sup>1,*</sup>,</span>
+                <span class="author-block">
+                  Jiangnan Shao<sup>1,*</sup>,</span>
+            </span>
+            <span class="author-block">
+              <a href="http://yuexinma.me">Yuexin Ma</a><sup>1,†</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://xingezhu.me/aboutme.html">Xinge Zhu</a><sup>2,†</sup>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>ShanghaiTech University,</span>
+            <span class="author-block"><sup>2</sup>The Chinese University of Hong Kong</span>
+          </div>
+          
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>*</sup>These authors contributed equally.</span>
+            <span class="author-block"><sup>†</sup>Corresponding author.</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2409.02914"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2409.02914"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="./static/IDKB_sources/IDKB_full_video.mp4"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/4DVLab/IDKB"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Github</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://github.com/4DVLab/IDKB"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Dataset</span>
+                  </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- teaser part -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" controls autoplay muted loop playsinline width="100%">
+        <source src="./static/IDKB_sources/IDKB_show.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Large Vision-Language Models (LVLMs) have recently garnered significant attention, with many efforts aimed at harnessing their general knowledge to enhance the interpretability and robustness of autonomous driving models. However, LVLMs typically rely on large, general-purpose datasets and lack the specialized expertise required for professional and safe driving. Existing vision-language driving datasets focus primarily on scene understanding and decision-making, without providing explicit guidance on traffic rules and driving skills, which are critical aspects directly related to driving safety. To bridge this gap, we propose IDKB, a large-scale dataset containing over one million data items collected from various countries, including driving handbooks, theory test data, and simulated road test data. Much like the process of obtaining a driver's license, IDKB encompasses nearly all the explicit knowledge needed for driving from theory to practice. In particular, we conducted comprehensive tests on 15 LVLMs using IDKB to assess their reliability in the context of autonomous driving and provided extensive analysis. We also fine-tuned popular models, achieving notable performance improvements, which further validate the significance of our dataset.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Data Overview</h2>
+        <img src="./static/IDKB_sources/images/data_example.png" style="display: block; margin: 0 auto; ">
+        <div class="content has-text-justified">
+          <p>
+            Intelligent Driving Knowledge Base (IDKB) is structured as a driving knowledge resource, mirroring the process individuals follow to acquire expertise when obtaining a driver's license. 
+            This process typically involves studying driving handbooks, taking theory tests, and practicing on the road, corresponding to the <b>driving handbook data, driving test data and driving road data</b> of our dataset.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Data Collection</h2>
+        <img src="./static/IDKB_sources/images/pipeline.png" style="display: block; margin: 0 auto; ">
+        <div class="content has-text-justified">
+          <p>
+            <b>Data construction pipeline of IDKB dataset.</b> For Driving Handbook and Driving Test Data, we collect comprehensive driving knowledge resources from internet, followed by data extraction and postprocessing to obtain the final data. For Driving Road Data, we utilize CARLA to generate simulated road scenarios focused on traffic sign comprehension.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Data Statistic</h2>
+        <img src="./static/IDKB_sources/images/data_statistic.png" style="display: block; margin: 0 auto; ">
+        <div class="content has-text-justified">
+          <p>
+            The <strong>IDKB dataset</strong> contains <strong>1,016,956</strong> entries, comprising 84.0% Driving Test Data, 11.1% CARLA data, and 5.0% Driving Handbook Data. It spans <strong>multiple countries and languages</strong>, with contributions from regions like China, Italy, and Germany.
+        </p>
+        <p>
+          The data can be divided into  <strong>four groups</strong> according to vehicle type
+            <ul>
+                <li>Car (61.6% - sedan, jeep, etc.)</li>
+                <li>Truck (19.3% - minivan, commercial, LGV, etc.)</li>
+                <li>Bus (7.9% - minibus, coaches, etc.)</li>
+                <li>Moto (11.2% - motorbike, motorcycle)</li>
+            </ul>
+        </p>
+        <p>
+            We utilized proprietary LVLMs to classify data into <strong>four semantic categories</strong>:
+            <ul>
+                <li>Laws & Regulations (22.2%)</li>
+                <li>Road Signs & Signals (38.6%)</li>
+                <li>Driving Techniques (22.0%)</li>
+                <li>Defensive Driving (17.1%)</li>
+            </ul>
+        </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Benchmark</h2>
+        <img src="./static/IDKB_sources/images/benchmark.png" style="display: block; margin: 0 auto; ">
+        <div class="content has-text-justified">
+          <p>
+            <strong>Quantitative results for multiple LVLMs on several tasks for driving knowledge understanding.</strong><br>
+            Results of proprietary LVLMs are overlaid in grey. The best results for each value of the proprietary LVLMs are highlighted in <span style="color:darkbrown;"><strong>dark brown</strong></span>, while the best results for the open-source LVLMs are indicated in <strong>bold</strong>.
+        </p>
+        <p>
+            Overall, the evaluated LVLMs generally <strong>did not demonstrate strong driving domain knowledge</strong>, highlighting the need for high-quality, structured, and diverse driving knowledge data for effective applications in autonomous driving.
+        </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Significant Improvement through Fine-Tuning</h2>
+        <img src="./static/IDKB_sources/images/finetune.png" style="display: block; margin: 0 auto; ">
+        <div class="content has-text-justified">
+          <p>We fine-tuned four LVLMs, each with a different visual encoder or LLM, to assess the impact of our structured driving knowledge data.</p>
+          <p>As shown in the table, these fine-tuned models achieved <strong>IDKB scores</strong> comparable to larger proprietary models. <strong>MiniCPM-Llama3-V2.5</strong> doubled its Test Data Score, underscoring the data's value in mastering driving laws, rules, and special situations.</p>
+          <p>The improvement in the <strong>Test Road Score</strong> reflects a better grasp of traffic regulations, reinforcing our dataset's role in advancing safer and more reliable autonomous driving systems.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Driving Knowledge Boosts Downstream Autonomous Driving Tasks</h2>
+        <img src="./static/IDKB_sources/images/planning.png" style="display: block; margin: 0 auto; ">
+        <div class="content has-text-justified">
+          <p>We applied the QwenVL-chat model, fine-tuned on the <strong>IDKB dataset</strong>, to the planning task using the <strong>nuScenes dataset</strong>, demonstrating how driving knowledge can boost downstream task performance.</p>
+          <p>Using a prompt-based method akin to <strong>DriveVLM</strong>, the model identifies traffic signs and predicts the next three seconds' trajectory.</p>
+          <p>The <strong>IDKB dataset</strong> aligns with human driving knowledge acquisition, enabling the model to better understand traffic laws and plan safer routes.</p>
+          <p>Our results confirm this:
+            <ul>
+              <li><strong>32% reduction</strong> in average L2 distance and a <strong>65% drop</strong> in collision metrics, reflecting improved safety.</li>
+              <li>The model correctly identifies the <strong>'ROAD WORK AHEAD'</strong> sign, decelerates, and plans a safer trajectory, evidenced by the decreasing offset between frames.</li>
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- show bibtex -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@misc{lu2024lvlmsobtaindriverslicense,
+      title={Can LVLMs Obtain a Driver's License? A Benchmark Towards Reliable AGI for Autonomous Driving}, 
+      author={Yuhang Lu and Yichen Yao and Jiadong Tu and Jiangnan Shao and Yuexin Ma and Xinge Zhu},
+      year={2024},
+      eprint={2409.02914},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2409.02914}, 
+}</code></pre>
+  </div>
+</section>
+
+
+<!-- show license -->
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <!-- <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a> -->
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            Website source code based on the <a
+            href="https://nerfies.github.io">Nerfies</a>  project page. 
+            If you want to reuse their <a
+            href="https://github.com/nerfies/nerfies.github.io">source code</a> , please credit them appropriately.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
