@@ -3,67 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
-  <!-- Primary Meta Tags -->
-  <!-- TODO: Replace with your paper title and author names -->
-  <meta name="title" content="ReMoGen: Real-time Human Interaction-to-Reaction Generation via Modular Learning from Diverse Data">
-  <!-- TODO: Write a compelling 150-160 character description of your research -->
-  <meta name="description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Add 5-10 relevant keywords for your research area -->
-  <meta name="keywords" content="KEYWORD1, KEYWORD2, KEYWORD3, machine learning, computer vision, AI">
-  <!-- TODO: List all authors -->
-  <meta name="author" content="FIRST_AUTHOR_NAME, SECOND_AUTHOR_NAME">
-  <meta name="robots" content="index, follow">
-  <meta name="language" content="English">
-  
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="article">
-  <!-- TODO: Replace with your institution or lab name -->
-  <meta property="og:site_name" content="INSTITUTION_OR_LAB_NAME">
-  <!-- TODO: Same as paper title above -->
-  <meta property="og:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta property="og:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Replace with your actual website URL -->
-  <meta property="og:url" content="https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE">
-  <!-- TODO: Create a 1200x630px preview image and update path -->
-  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="PAPER_TITLE - Research Preview">
-  <meta property="article:published_time" content="2024-01-01T00:00:00.000Z">
-  <meta property="article:author" content="FIRST_AUTHOR_NAME">
-  <meta property="article:section" content="Research">
-  <meta property="article:tag" content="KEYWORD1">
-  <meta property="article:tag" content="KEYWORD2">
-
-  <!-- Twitter -->
+  <meta name="description" content="ReMoGen is a modular framework for real-time human interaction-to-reaction generation across human-human, human-scene, and mixed human-human-scene settings.">
+  <meta property="og:title" content="ReMoGen: Real-time Human Interaction-to-Reaction Generation via Modular Learning from Diverse Data"/>
+  <meta property="og:description" content="Project page with qualitative comparisons for HHI, HSI, mixed-modality interaction, universal prior ablation, and FWSR ablation."/>
+  <meta property="og:image" content="static/images/social_preview_placeholder.svg" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
   <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: Replace with your lab/institution Twitter handle -->
-  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
-  <!-- TODO: Replace with first author's Twitter handle -->
-  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
-  <!-- TODO: Same as paper title above -->
-  <meta name="twitter:title" content="PAPER_TITLE">
-  <!-- TODO: Same as description above -->
-  <meta name="twitter:description" content="BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS">
-  <!-- TODO: Same as social preview image above -->
-  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
-  <meta name="twitter:image:alt" content="PAPER_TITLE - Research Preview">
+  <meta name="keywords" content="human motion generation, interaction-to-reaction generation, human-human interaction, human-scene interaction, diffusion model, motion prior">
+  <title>ReMoGen</title>
 
-  <!-- Academic/Research Specific -->
-  <meta name="citation_title" content="PAPER_TITLE">
-  <meta name="citation_author" content="FIRST_AUTHOR_LAST, FIRST_AUTHOR_FIRST">
-  <meta name="citation_author" content="SECOND_AUTHOR_LAST, SECOND_AUTHOR_FIRST">
-  <meta name="citation_publication_date" content="2024">
-  <meta name="citation_conference_title" content="CONFERENCE_NAME">
-  <meta name="citation_pdf_url" content="https://YOUR_DOMAIN.com/static/pdfs/paper.pdf">
-  
-  <!-- Additional SEO -->
-  <meta name="theme-color" content="#2563eb">
-  <meta name="msapplication-TileColor" content="#2563eb">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
   
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -71,11 +20,9 @@
   <link rel="preconnect" href="https://ajax.googleapis.com">
   <link rel="preconnect" href="https://documentcloud.adobe.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
-
-
-  <!-- TODO: Replace with your paper title and authors -->
-  <title>ReMoGen: Real-time Human Interaction-to-Reaction Generation via Modular Learning from Diverse Data</title>
-  
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="apple-touch-icon" href="static/images/favicon.ico">
   
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -105,116 +52,26 @@
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-  
-  <!-- Structured Data for Academic Papers -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "headline": "PAPER_TITLE",
-    "description": "BRIEF_DESCRIPTION_OF_YOUR_RESEARCH_CONTRIBUTION_AND_FINDINGS",
-    "author": [
-      {
-        "@type": "Person",
-        "name": "FIRST_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      },
-      {
-        "@type": "Person",
-        "name": "SECOND_AUTHOR_NAME",
-        "affiliation": {
-          "@type": "Organization",
-          "name": "INSTITUTION_NAME"
-        }
-      }
-    ],
-    "datePublished": "2024-01-01",
-    "publisher": {
-      "@type": "Organization",
-      "name": "CONFERENCE_OR_JOURNAL_NAME"
-    },
-    "url": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE",
-    "image": "https://YOUR_DOMAIN.com/static/images/social_preview.png",
-    "keywords": ["KEYWORD1", "KEYWORD2", "KEYWORD3", "machine learning", "computer vision"],
-    "abstract": "FULL_ABSTRACT_TEXT_HERE",
-    "citation": "BIBTEX_CITATION_HERE",
-    "isAccessibleForFree": true,
-    "license": "https://creativecommons.org/licenses/by/4.0/",
-    "mainEntity": {
-      "@type": "WebPage",
-      "@id": "https://YOUR_DOMAIN.com/YOUR_PROJECT_PAGE"
-    },
-    "about": [
-      {
-        "@type": "Thing",
-        "name": "RESEARCH_AREA_1"
-      },
-      {
-        "@type": "Thing", 
-        "name": "RESEARCH_AREA_2"
-      }
-    ]
-  }
-  </script>
-  
-  <!-- Website/Organization Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "INSTITUTION_OR_LAB_NAME",
-    "url": "https://YOUR_INSTITUTION_WEBSITE.com",
-    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico",
-    "sameAs": [
-      "https://twitter.com/YOUR_TWITTER_HANDLE",
-      "https://github.com/YOUR_GITHUB_USERNAME"
-    ]
-  }
-  </script>
 </head>
-<body>
+<body class="remogen-page">
 
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title"><span class="accent">ReMoGen</span>: Real-time Human Interaction-to-Reaction Generation via Modular Learning from Diverse Data</h1>
 
-  <!-- Scroll to Top Button -->
-  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
-    <i class="fas fa-chevron-up"></i>
-  </button>
-
-  <!-- More Works Dropdown -->
-
-  <main id="main-content">
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">ReMoGen: Real-time Human Interaction-to-Reaction Generation via Modular Learning from Diverse Data</h1>
-<div class="is-size-5 publication-authors">
-  <span class="author-block">
-    <a href="#" target="_blank">Yaoqin Ye</a><sup>1</sup>,
-  </span>
-  <span class="author-block">
-    <a href="#" target="_blank">Yiteng Xu</a><sup>1</sup>,
-  </span>
-  <span class="author-block">
-    <a href="#" target="_blank">Qin Sun</a><sup>2,3</sup>,
-  </span>
-  <span class="author-block">
-    <a href="#" target="_blank">Xinge Zhu</a><sup>4</sup>,
-  </span>
-  <span class="author-block">
-    <a href="#" target="_blank">Yujing Sun</a><sup>5</sup>,
-  </span>
-  <span class="author-block">
-    <a href="#" target="_blank">Yuexin Ma</a><sup>1,&dagger;</sup>
-  </span>
-</div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><a href="https://fallingnight.github.io/" target="_blank">Yaoqin Ye</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://yiteng-xu.github.io/" target="_blank">Yiteng Xu</a><sup>1</sup>,</span>
+            <span class="author-block"><a href="https://www.researchgate.net/profile/Qin-Sun-12" target="_blank">Qin Sun</a><sup>2,3</sup>,</span>
+            <span class="author-block"><a href="https://xingezhu.me/" target="_blank">Xinge Zhu</a><sup>4</sup>,</span>
+            <span class="author-block"><a href="https://yujingsun.github.io/" target="_blank">Yujing Sun</a><sup>5</sup>,</span>
+            <span class="author-block"><a href="http://yuexinma.me/" target="_blank">Yuexin Ma</a><sup>1,†</sup></span>
+          </div>
 <style>
-  .affiliation {
+           .affiliation {
     font-size: 0.85em;
     color: #6c757d;
   }
@@ -236,57 +93,39 @@
     <small><sup>5</sup>Nanyang Technological University</small>
   </span>
 </div>
-
-                  <div class="is-size-5 publication-authors">
+            <div class="is-size-5 publication-authors">
                     <!-- TODO: Replace with your institution and conference/journal info -->
                     <span class="author-block" style="font-weight: bold;">CVPR 2026</span>
                     <!-- TODO: Remove this line if no equal contribution -->
                     <span class="eql-cntrb" style="font-style: normal;"><small><br><sup>&dagger;</sup>Corresponding Author.</small></span>
                   </div>
 
-                  <div class="column has-text-centered">
-                    <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
-                      <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                        class="external-link button is-normal is-rounded is-dark">
-                        <span class="icon">
-                          <i class="fas fa-file-pdf"></i>
-                        </span>
-                        <span>Paper</span>
-                      </a>
-                    </span>
-
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
-
-                  <!-- TODO: Replace with your GitHub repository URL -->
-                  <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
+          <div class="column has-text-centered mt-4">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2604.01082" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2604.01082" target="_blank" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
+                  </span><span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/4DVLab/ReMoGen" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span><span>Code (coming soon)</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-cube"></i>
+                  </span><span>Model (coming soon)</span>
                 </a>
               </span>
             </div>
@@ -297,10 +136,148 @@
   </div>
 </section>
 
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Video Presentation</h2>
+      <div class="publication-video">
+        <iframe src="https://www.youtube.com/embed/KAKnqFX8sMU" title="ReMoGen Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Human behaviors in real-world environments are inherently interactive, with an individual's motion shaped by surrounding agents and the scene. Such capabilities are essential for applications in virtual avatars, interactive animation, and human-robot collaboration. We target <strong>real-time human interaction-to-reaction generation</strong>, which generates the ego's future motion from dynamic multi-source cues, including others' actions, scene geometry, and optional high-level semantic inputs. This task is fundamentally challenging due to (i) limited and fragmented interaction data distributed across heterogeneous single-person, human-human, and human-scene domains, and (ii) the need to produce low-latency yet high-fidelity motion responses during continuous online interaction. To address these challenges, we propose <strong>ReMoGen</strong> (<strong>Re</strong>action <strong>Mo</strong>tion <strong>Gen</strong>eration), a modular learning framework for real-time interaction-to-reaction generation. ReMoGen leverages a universal motion prior learned from large-scale single-person motion datasets and adapts it to target interaction domains through independently trained <strong>Meta-Interaction</strong> modules, enabling robust generalization under data-scarce and heterogeneous supervision. To support responsive online interaction, ReMoGen performs segment-level generation together with a lightweight <strong>Frame-wise Segment Refinement</strong> module that incorporates newly observed cues at the frame level, improving both responsiveness and temporal coherence without expensive full-sequence inference. Extensive experiments across human-human, human-scene, and mixed-modality interaction settings show that ReMoGen produces high-quality, coherent, and responsive reactions, while generalizing effectively across diverse interaction scenarios.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Overview</h2>
+    <div class="paper-figure">
+      <img src="static/images/teasor.png" alt="Overview." loading="lazy">
+    </div>
+    <p class="section-intro">ReMoGen is a modular framework that learns from heterogeneous interaction data. It supports real-time, high-quality, and coherent reaction generation across both single-domain and mixed-modality interaction settings.</p>
+  </div>
+</section>
 
-<!--BibTex citation -->
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Framework</h2>
+    <div class="paper-figure">
+      <img src="static/images/main.png" alt="Framework" loading="lazy">
+    </div>
+    <p class="section-intro">ReMoGen predicts ego motion autoregressively using three components: a frozen text-conditioned single-person motion prior, Meta-Interaction modules that adapt the prior to human-human and human-scene domains, and a Frame-wise Segment Refinement module that updates short predicted segments using the latest interaction cues to achieve low-latency online rollout while preserving motion fidelity.</p>
+  </div>
+</section>
+
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Human-Human Interaction Comparison</h2>
+    <div class="compare-shell" data-compare="hhi">
+      <div class="compare-tabs" data-tab-bar></div>
+      <div class="compare-body">
+        <div class="video-grid" data-grid></div>
+        <div class="prompt-block">
+          <div class="meta-text">Textual Intent</div>
+          <div class="prompt-text" data-prompt></div>
+        </div>
+      </div>
+    </div>
+    <p class="section-intro">On Inter-X, ReMoGen generate interactions with natural and stable movement, while maintaining low per-frame latency (0.042s, and w/ FWSR 0.047s).</p>  
+  <p class="replacement-note"><span style="color: #6b92e6; font-weight: 600;">Blue</span>: ego, <span style="color: #dc5d26; font-weight: 600;">Red</span>: others</p>
+  </div>
+    
+
+  </section>
+
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Human-Scene Interaction Comparison</h2>
+    <div class="compare-shell" data-compare="hsi">
+      <div class="compare-tabs" data-tab-bar></div>
+      <div class="compare-body">
+        <div class="video-grid grid-4" data-grid></div>
+        <div class="prompt-block">
+          <div class="meta-text">Textual Intent</div>
+          <div class="prompt-text" data-prompt></div>
+        </div>
+      </div>
+    </div>
+    <p class="section-intro">On LINGO, ReMoGen produces smooth, scene-aware interactions with plausible body dynamics, while still maintaining low latency. </p>
+  
+  </div>
+</section>
+
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">Mixed-Modality Qualitative Examples</h2>
+    <div class="carousel-shell" data-mixed-carousel>
+      <div class="mixed-carousel">
+        <button class="carousel-arrow prev" type="button" data-prev aria-label="Previous example">&#10094;</button>
+        <button class="carousel-arrow next" type="button" data-next aria-label="Next example">&#10095;</button>
+        <div class="mixed-carousel-stage">
+          <div data-stage></div>
+        </div>
+        <div class="mixed-carousel-dots" data-dots></div>
+        <div class="carousel-theme">
+          <div class="carousel-theme-meta" data-theme-meta></div>
+          <div class="carousel-theme-text" data-theme-text></div>
+
+        </div>
+      </div>
+    </div>
+    <p class="section-intro">ReMoGen can handle complex three-way interactions involving humans and the scene. In diverse environments, ReMoGen generates coherent mixed human-human-scene interactions.</p>
+    <p class="replacement-note"><span style="color: #6b92e6; font-weight: 600;">Blue</span>: ego, <span style="color: #dc5d26; font-weight: 600;">Red</span>: others</p>
+  </div>
+</section>
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">About Universal Prior</h2>
+    <div class="compare-shell" data-compare="prior">
+      <div class="compare-tabs" data-tab-bar></div>
+      <div class="compare-body">
+        <div class="video-grid grid-4" data-grid></div>
+        <div class="prompt-block">
+          <div class="meta-text" data-meta></div>
+          <div class="prompt-text" data-prompt></div>
+        </div>
+      </div>
+    </div>
+    <p class="section-intro">The universal prior ablation shows that prior-only generation suffers from distribution mismatch, scratch training is limited by scarce interaction data, and joint finetuning weakens pretrained motion knowledge. Keeping the universal prior frozen and adapting with Meta-Interaction modules preserves strong kinematic structure while improving interaction-specific realism and semantic consistency.</p>
+  <p class="replacement-note"><span style="color: #6b92e6; font-weight: 600;">Blue</span>: ego, <span style="color: #dc5d26; font-weight: 600;">Red</span>: others</p>  
+  </div>
+</section>
+
+<section class="section hero is-small">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3">About Frame-wise Segment Refinement</h2>
+    <div class="compare-shell" data-compare="fwsr">
+      <div class="compare-tabs" data-tab-bar></div>
+      <div class="compare-body">
+        <div class="video-grid grid-2" data-grid></div>
+        <div class="prompt-block">
+          <div class="meta-text" data-meta></div>
+          <div class="prompt-text" data-prompt></div>
+        </div>
+      </div>
+    </div>
+    <p class="section-intro">Frame-wise Segment Refinement improves responsiveness by applying lightweight per-frame corrections on top of segment-level predictions. Compared with the baseline segment rollout, FWSR reacts more promptly to newly observed interaction cues while maintaining the temporal stability of the backbone generator.</p>
+    <p class="replacement-note"><span style="color: #6b92e6; font-weight: 600;">Blue</span>: ego, <span style="color: #dc5d26; font-weight: 600;">Red</span>: others</p>
+  </div>
+</section>
+
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <div class="bibtex-header">
@@ -310,35 +287,29 @@
           <span class="copy-text">Copy</span>
         </button>
       </div>
-      <pre id="bibtex-code"><code>xxx</code></pre>
+      <pre id="bibtex-code"><code>@article{ye2026remogen,
+  title={ReMoGen: Real-time Human Interaction-to-Reaction Generation via Modular Learning from Diverse Data},
+  author={Ye, Yaoqin and Xu, Yiteng and Sun, Qin and Zhu, Xinge and Sun, Yujing and Ma, Yuexin},
+  journal={arXiv preprint arXiv:2604.01082},
+  year={2026}
+}</code></pre>
     </div>
 </section>
-<!--End BibTex citation -->
 
-
-  <footer class="footer">
+<footer class="footer">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-8">
-        <div class="content">
-
-          <p>
-            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-
-        </div>
+        <div class="content has-text-centered">
+          <p>This page is adapted from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> and customized for the ReMoGen project page.</p>
+        </div>            
       </div>
     </div>
   </div>
 </footer>
 
-<!-- Statcounter tracking code -->
-  
-<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
-
-    <!-- End of Statcounter Code -->
-
-  </body>
-  </html>
+<script src="static/js/bulma-carousel.min.js"></script>
+<script src="static/js/bulma-slider.min.js"></script>
+<script src="static/js/index.js"></script>
+</body>
+</html>
