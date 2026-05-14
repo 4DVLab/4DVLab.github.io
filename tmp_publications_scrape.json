@@ -1,0 +1,605 @@
+[
+  {
+    "title": "From Noise to Intent: Anchoring Generative VLA Policies with Residual Bridges",
+    "authors": "Yiming Zhong, Yaoyu He, Zemin Yang, Pengfei Tian, Yifan Huang, Qingqiu Huang, Xinge Zhu, Yuexin Ma*.",
+    "venue": "ICML, 2026",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/ResVLA.png",
+    "hrefs": [
+      "https://arxiv.org/pdf/2604.21391",
+      "https://res-vla.github.io/ResVLA/"
+    ]
+  },
+  {
+    "title": "OptimalCap: Efficient and Robust LiDAR-Based Motion Capture in Free Environments",
+    "authors": "Yiming Ren, Yujing Sun, Xiao Han, Yichen Yao, Xiaoxiao Long, Xinge Zhu, Siu Ming Yiu, Yuexin Ma*.",
+    "venue": "TPAMI, 2026",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/optimalcap.png",
+    "hrefs": [
+      "https://arxiv.org/abs/",
+      "https://freq-policy.github.io/"
+    ]
+  },
+  {
+    "title": "Sparkle: A Robust and Versatile Representation for Point Cloud-based Human Motion Capture",
+    "authors": "Yiming Ren, Yujing Sun, Aoru Xue, Kwok-Yan Lam, Yuexin Ma*.",
+    "venue": "ICLR, 2026",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/sparkle.png",
+    "hrefs": [
+      "https://arxiv.org/abs/",
+      "https://freq-policy.github.io/"
+    ]
+  },
+  {
+    "title": "HUMOF: Human Motion Forecasting in Interactive Social Scenes",
+    "authors": "Caiyi Sun, Yujing Sun, Xiao Han, Zemin Yang, Jiawei Liu, Xinge Zhu, Siu Ming Yiu, Yuexin Ma*.",
+    "venue": "ICLR, 2026",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/humof.png",
+    "hrefs": [
+      "https://arxiv.org/abs/2506.03753",
+      "https://freq-policy.github.io/"
+    ]
+  },
+  {
+    "title": "ReMoGen: Real-time Human Interaction-to-Reaction Generation via Modular Learning from Diverse Data",
+    "authors": "Yaoqin Ye, Yiteng Xu, Qin Sun, Xinge Zhu, Yujing Sun, Yuexin Ma*.",
+    "venue": "CVPR, 2026",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/remogen.png",
+    "hrefs": [
+      "https://arxiv.org/abs/",
+      "https://freq-policy.github.io/"
+    ]
+  },
+  {
+    "title": "Affordance-R1: Reinforcement Learning for Generalizable Affordance Reasoning in Multimodal Large Language Models",
+    "authors": "Hanqing Wang, Shaoyang Wang, Yiming Zhong, Zemin Yang, Jiamin Wang, Zhiqing Cui, Jiahao Yuan, Yifan Han, Mingyu Liu, Yuexin Ma*.",
+    "venue": "AAAI, 2026",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/affordance.png",
+    "hrefs": [
+      "https://arxiv.org/pdf/2508.06206",
+      "https://freq-policy.github.io/"
+    ]
+  },
+  {
+    "title": "LiveHPS-Lite: A Lightweight LiDAR-based Motion Capture System for Edge Applications",
+    "authors": "Yiren Zhu, Junsheng Zhou, Yiming Ren, Hanshu Hezi, Yuexin Ma* and Xin Lou*.",
+    "venue": "31st Asia and South Pacific Design Automation Conference (ASP-DAC), 2026",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/lite.png",
+    "hrefs": [
+      "https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=11420559",
+      "https://freq-policy.github.io/"
+    ]
+  },
+  {
+    "title": "FreqPolicy: Frequency Autoregressive Visuomotor Policy with Continuous Tokens",
+    "authors": "Yiming Zhong, Yumeng Liu, Chuyang Xiao, Zemin Yang, Youzhuo Wang, Yufei Zhu, Ye Shi, Yujing Sun, Xinge Zhu, Yuexin Ma*.",
+    "venue": "NeurIPS, 2025",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/freqpolicy.png",
+    "hrefs": [
+      "https://arxiv.org/abs/2506.01583",
+      "https://freq-policy.github.io/"
+    ]
+  },
+  {
+    "title": "MOSPA: Human Motion Generation Driven by Spatial Audio",
+    "authors": "Shuyang Xu*, Zhiyang Dou*, Mingyi Shi, Liang Pan, Leo Ho, Jingbo Wang, Yuan Liu, Cheng Lin, Yuexin Ma, Wenping Wang, Taku Komura.",
+    "venue": "NeurIPS, 2025",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/mospa.png",
+    "hrefs": [
+      "https://arxiv.org/abs/2507.11949",
+      "https://frank-zy-dou.github.io/projects/MOSPA/"
+    ]
+  },
+  {
+    "title": "SymBridge: A Human-in-the-Loop Cyber-Physical Interactive System for Adaptive Human-Robot Symbiosis",
+    "authors": "Haoran Chen†, Yiteng Xu†, Yiming Ren, Yaoqin Ye, Xinran Li, Ning Ding, Yuxuan Wu, Yaoze Liu, Peishan Cong, Ziyi Wang, Bushi Liu, Yuhan Chen, Zhiyang Dou, Xiaokun Leng, Manyi Li*, Yuexin Ma*, Changhe Tu.",
+    "venue": "SIGGRAPH Asia, 2025",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/symbridge.png",
+    "hrefs": [
+      "https://arxiv.org/pdf/2502.07358v2",
+      "https://irc-vitahome.github.io/SymBridge/"
+    ]
+  },
+  {
+    "title": "EvolvingGrasp: Evolutionary Grasp Generation via Efficient Preference Alignment",
+    "authors": "Yufei Zhu, Yiming Zhong, Zemin Yang, Peishan Cong, Jingyi Yu, Xinge Zhu, Yuexin Ma*.",
+    "venue": "The International Conference on Computer Vision, (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/evolvegrasp.png",
+    "hrefs": [
+      "https://arxiv.org/abs/2503.14329",
+      "https://evolvinggrasp.github.io/"
+    ]
+  },
+  {
+    "title": "DexH2R: A Benchmark for Dynamic Dexterous Grasping in Human-to-Robot Handover",
+    "authors": "Youzhuo Wang, Jiayi Ye, Chuyang Xiao, Yiming Zhong, Heng Tao, Hang Yu, Yumeng Liu, Jingyi Yu, Yuexin Ma*.",
+    "venue": "The International Conference on Computer Vision, (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/dynamicgrasp.png",
+    "hrefs": [
+      "https://arxiv.org/abs/2506.23152",
+      "https://dexh2r.github.io/"
+    ]
+  },
+  {
+    "title": "ReAL-AD: Towards Human-Like Reasoning in End-to-End Autonomous Driving",
+    "authors": "Yuhang Lu, Jiadong Tu, Yuexin Ma*, Xinge Zhu*.",
+    "venue": "The International Conference on Computer Vision, (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/realAD.png",
+    "hrefs": []
+  },
+  {
+    "title": "Towards Immersive Human-X Interaction: A Real-Time Framework for Physically Plausible Motion Synthesis",
+    "authors": "Kaiyang Ji, Ye Shi, Zichen Jin, Kangyi Chen, Lan Xu, Yuexin Ma, Jingyi Yu, Jingya Wang.",
+    "venue": "The International Conference on Computer Vision, (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/Human-X.png",
+    "hrefs": []
+  },
+  {
+    "title": "STAGE: A Stream-Centric Generative World Model for Long-Horizon Driving-Scene Simulation",
+    "authors": "Jiamin Wang, Yichen Yao, Xiang Feng, Hang Wu, Yaming Wang, Qingqiu Huang, Yuexin Ma*, Xinge Zhu*.",
+    "venue": "IEEE/RSJ International Conference on Intelligent Robots and Systems, (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/stage.png",
+    "hrefs": [
+      "https://arxiv.org/pdf/2506.13138",
+      "https://4dvlab.github.io/STAGE/"
+    ]
+  },
+  {
+    "title": "Towards Label-Free 3D Visual Grounding with Vision Foundation Models",
+    "authors": "Xiaopei Wu, Yuenan Hou, Binbin Lin, Xinge Zhu, Yuexin Ma, Haifeng Liu, Deng Cai, Xiao Sun.",
+    "venue": "IEEE/RSJ International Conference on Intelligent Robots and Systems, (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/3DVG.png",
+    "hrefs": []
+  },
+  {
+    "title": "DexGrasp Anything: Towards Universal Robotic Dexterous Grasping with Physics Awareness",
+    "authors": "Yiming Zhong, Qi Jiang, Jingyi Yu, Yuexin Ma*.",
+    "venue": "IEEE / CVF Computer Vision and Pattern Recognition Conference (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/dexgrasp.png",
+    "hrefs": [
+      "https://arxiv.org/abs/2503.08257",
+      "https://dexgraspanything.github.io/"
+    ]
+  },
+  {
+    "title": "SemGeoMo: Dynamic Contextual Human Motion Generation with Semantic and Geometric Guidance",
+    "authors": "Peishan Cong, Ziyi Wang, Yuexin Ma*, Xiangyu Yue*.",
+    "venue": "IEEE / CVF Computer Vision and Pattern Recognition Conference (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/SemGeoMo.png",
+    "hrefs": [
+      "https://arxiv.org/pdf/2503.01291"
+    ]
+  },
+  {
+    "title": "EasyHOI: Unleashing the Power of Large Models for Reconstructing Hand-Object Interactions in the Wild",
+    "authors": "Yumeng Liu, Xiaoxiao Long*, Zemin Yang, Yuan Liu, Marc Habermann, Christian Theobalt, Yuexin Ma*, Wenping Wang.",
+    "venue": "IEEE / CVF Computer Vision and Pattern Recognition Conference (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/easyhoi.png",
+    "hrefs": [
+      "https://arxiv.org/pdf/2411.14280"
+    ]
+  },
+  {
+    "title": "OccMamba: Semantic Occupancy Prediction with State Space Models",
+    "authors": "Heng Li, Yuenan Hou, Xiaohan Xing, Yuexin Ma, Xiao Sun, Yanyong Zhang.",
+    "venue": "IEEE / CVF Computer Vision and Pattern Recognition Conference (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/OccMamba.png",
+    "hrefs": [
+      "https://arxiv.org/abs/2408.09859"
+    ]
+  },
+  {
+    "title": "ClimbingCap: Multi-Modal Dataset and Method for Rock Climbing in World Coordinate",
+    "authors": "Ming Yan, Xincheng Lin, Yuhua Luo, Shuqi Fan, Yudi Dai, Qixin Zhong, Lincai Zhong, Yuexin Ma, Lan Xu, Chenglu Wen, Siqi Shen, Cheng Wang.",
+    "venue": "IEEE / CVF Computer Vision and Pattern Recognition Conference (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/ClimbingCap.png",
+    "hrefs": []
+  },
+  {
+    "title": "Optimizing Efficiency of Mixed Traffic through Reinforcement Learning: A Topology-Independent Approach and Benchmark",
+    "authors": "Chuyang Xiao, Dawei Wang, Xinzheng Tang, Jia Pan, Yuexin Ma*.",
+    "venue": "IEEE International Conference on Robotics & Automation (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/mixtraffic.png",
+    "hrefs": [
+      "https://sites.google.com/berkeley.edu/mixedtrafficplus/home"
+    ]
+  },
+  {
+    "title": "RenderWorld: World Model with Self-Supervised 3D Label",
+    "authors": "Ziyang Yan, Wenzhen Dong, Yihua Shao, Yuhang Lu, Haiyang Liu, Jingwen Liu, Haozhe Wang, Zhe Wang, Yan Wang*, Fabio Remondino, Yuexin Ma*.",
+    "venue": "IEEE International Conference on Robotics & Automation (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/RenderWorld.png",
+    "hrefs": [
+      "https://arxiv.org/pdf/2409.11356"
+    ]
+  },
+  {
+    "title": "FreeCap: Hybrid Calibration-Free Motion Capture in Open Environments",
+    "authors": "Aoru Xue, Yiming Ren, Zining Song, Mao Ye, Xinge Zhu, Yuexin Ma*.",
+    "venue": "The 39th Annual AAAI Conference on Artificial Intelligence (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/freecap.png",
+    "hrefs": [
+      "https://arxiv.org/abs/2411.04469"
+    ]
+  },
+  {
+    "title": "Can LVLMs Obtain a Driver's License? A Benchmark Towards Reliable AGI for Autonomous Driving",
+    "authors": "Yuhang Lu, Yichen Yao, Jiadong Tu, Jiangnan Shao, Yuexin Ma*, Xinge Zhu*.",
+    "venue": "The 39th Annual AAAI Conference on Artificial Intelligence (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/IDKB.png",
+    "hrefs": [
+      "https://arxiv.org/abs/2409.02914"
+    ]
+  },
+  {
+    "title": "UniDemoiré: Towards Universal Image Demoiréing with Data Generation and Synthesis",
+    "authors": "Zemin Yang, Yujing Sun, Xidong Peng, Siu Ming Yiu, Yuexin Ma*.",
+    "venue": "The 39th Annual AAAI Conference on Artificial Intelligence (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/unidemoire.png",
+    "hrefs": []
+  },
+  {
+    "title": "RoCoSDF: Row-Column Scanned Neural Signed Distance Fields for Freehand 3D Ultrasound Imaging Shape Reconstruction",
+    "authors": "Hongbo Chen, Yuchong Gao, Shuhang Zhang, Jiangjie Wu, Yuexin Ma, Rui Zheng*.",
+    "venue": "Medical Image Computing and Computer Assisted Intervention (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/RoCoSDF.png",
+    "hrefs": [
+      "https://link.springer.com/chapter/10.1007/978-3-031-72083-3_67"
+    ]
+  },
+  {
+    "title": "Gait Recognition in Large-scale Free Environment via Single LiDAR",
+    "authors": "Xiao Han, Yiming Ren, Peishan Cong, Yujing Sun, Jingya Wang, Lan Xu, Yuexin Ma*.",
+    "venue": "ACM Multimedia (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/gait.PNG",
+    "hrefs": []
+  },
+  {
+    "title": "Vision-Centric BEV Perception: A Survey",
+    "authors": "Yuexin Ma, Tai Wang, Xuyang Bai, Huitong Yang, Yuenan Hou, Yaming Wang, Yu Qiao, Ruigang Yang, Xinge Zhu.",
+    "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/Vision-Centric.png",
+    "hrefs": [
+      "https://ieeexplore.ieee.org/abstract/document/10670223"
+    ]
+  },
+  {
+    "title": "HiSC4D: Human-Centered Interaction and 4D Scene Capture in Large-Scale Space Using Wearable IMUs and LiDAR",
+    "authors": "Yudi Dai, Zhiyong Wang, Xiping Lin, Chenglu Wen, Lan Xu, Siqi Shen, Yuexin Ma, Cheng Wang.",
+    "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/HiSC4D.png",
+    "hrefs": [
+      "https://ieeexplore.ieee.org/document/10670484"
+    ]
+  },
+  {
+    "title": "OctreeOcc: Efficient and Multi-Granularity Occupancy Prediction Using Octree Queries",
+    "authors": "Yuhang Lu, Xinge Zhu, Tai Wang*, Yuexin Ma*.",
+    "venue": "Conference on Neural Information Processing Systems (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/OctreeOcc.png",
+    "hrefs": [
+      "https://arxiv.org/pdf/2312.03774"
+    ]
+  },
+  {
+    "title": "Towards Practical Human Motion Prediction with LiDAR Point Clouds",
+    "authors": "Xiao Han, Yiming Ren, Yichen Yao, Yujing Sun, Yuexin Ma*.",
+    "venue": "ACM Multimedia (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/prediction.PNG",
+    "hrefs": []
+  },
+  {
+    "title": "LiveHPS++: Robust and Coherent Motion Capture in Dynamic Free Environment",
+    "authors": "Yiming Ren, Xiao Han, Yichen Yao, Xiaoxiao Long, Yujing Sun*, Yuexin Ma*.",
+    "venue": "European Conference on Computer Vision (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/liveHPS++.PNG",
+    "hrefs": [
+      "https://arxiv.org/abs/2407.09833"
+    ]
+  },
+  {
+    "title": "WildRefer: 3D Object Localization in Large-scale Dynamic Scenes with Multi-modal Visual Data and Natural Language",
+    "authors": "Zhenxiang Lin, Xidong Peng, Peishan Cong, Ge Zheng, Yujing Sun, Yuenan Hou, Xinge Zhu, Sibei Yang, Yuexin Ma*.",
+    "venue": "European Conference on Computer Vision (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/wildrefer.PNG",
+    "hrefs": [
+      "https://arxiv.org/abs/2304.05645"
+    ]
+  },
+  {
+    "title": "Learning to Adapt SAM for Segmenting Cross-domain Point Clouds",
+    "authors": "Xidong Peng, Runnan Chen, Feng Qiao, Lingdong Kong, Youquan Liu, Yujing Sun, Tai Wang, Xinge Zhu*, Yuexin Ma*.",
+    "venue": "European Conference on Computer Vision (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/SAMUDA.PNG",
+    "hrefs": []
+  },
+  {
+    "title": "GeoWizard: Unleashing the Diffusion Priors for 3D Geometry Estimation from a Single Image",
+    "authors": "Xiao Fu, Mu Hu, Wei Yin, Kaixuan Wang, Yuexin Ma, Ping Tan, Shaojie Shen, Dahua Lin, Xiaoxiao Long.",
+    "venue": "European Conference on Computer Vision (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/GeoWizard.PNG",
+    "hrefs": []
+  },
+  {
+    "title": "Part2Object: Hierarchical Unsupervised 3D Instance Segmentation",
+    "authors": "Cheng Shi, Yulin Zhang, Bin Yang, Jiajin Tang, Yuexin Ma, Sibei Yang.",
+    "venue": "European Conference on Computer Vision (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/part2object.PNG",
+    "hrefs": []
+  },
+  {
+    "title": "RealDex: Towards Human-like Grasping for Robotic Dexterous Hand",
+    "authors": "Yumeng Liu, Yaxun Yang, Youzhuo Wang, Xiaofei Wu, Jiamin Wang, Yichen Yao, Sören Schwertfeger, Sibei Yang, Wenping Wang, Jingyi Yu, Xuming He, Yuexin Ma*.",
+    "venue": "International Joint Conference on Artificial Intelligence(",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/RealDex.PNG",
+    "hrefs": []
+  },
+  {
+    "title": "LiveHPS: LiDAR-based Scene-level Human Pose and Shape Estimation in Free Environment",
+    "authors": "Yiming Ren, Xiao Han, Chengfeng Zhao, Jingya Wang, Lan Xu, Jingyi Yu, Yuexin Ma*.",
+    "venue": "The IEEE / CVF Computer Vision and Pattern Recognition Conference(",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/liveHPS.PNG",
+    "hrefs": []
+  },
+  {
+    "title": "HUNTER: Unsupervised Human-centric 3D Detection via Transferring Knowledge from Synthetic Instances to Real Scenes",
+    "authors": "Yichen Yao, Zimo Jiang, Yujing Sun, Zhencai Zhu, Xinge Zhu, Runnan Chen, Yuexin Ma*.",
+    "venue": "The IEEE / CVF Computer Vision and Pattern Recognition Conference(",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/hunterCVPR24.PNG",
+    "hrefs": []
+  },
+  {
+    "title": "A Unified Framework for Human-centric Point Cloud Video Understanding",
+    "authors": "Yiteng Xu, Kecheng Ye, Xiao Han, Yiming Ren, Xinge Zhu, Yuexin Ma*.",
+    "venue": "The IEEE / CVF Computer Vision and Pattern Recognition Conference(",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/unify.PNG",
+    "hrefs": []
+  },
+  {
+    "title": "GaussianShader: 3D Gaussian Splatting with Shading Functions for Reflective Surfaces",
+    "authors": "YingWenQi Jiang, Jiadong Tu, Yuan Liu, Xifeng Gao, Xiaoxiao Long*, Wenping Wang, Yuexin Ma*.",
+    "venue": "The IEEE / CVF Computer Vision and Pattern Recognition Conference(",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/Gaussian.PNG",
+    "hrefs": []
+  },
+  {
+    "title": "Multi-Space Alignments Towards Universal LiDAR Segmentation",
+    "authors": "Youquan Liu, Lingdong Kong, Xiaoyang Wu, Runnan Chen, Xin Li, Liang Pan, Ziwei Liu, Yuexin Ma*.",
+    "venue": "The IEEE / CVF Computer Vision and Pattern Recognition Conference(",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/M3NET.PNG",
+    "hrefs": []
+  },
+  {
+    "title": "Towards Label-free Scene Understanding by Vision Foundation Models",
+    "authors": "Runnan Chen, Youquan Liu, Lingdong Kong, Nenglun Chen, Xinge Zhu, Yuexin Ma*, Tongliang Liu, Wenping Wang*.",
+    "venue": "Conference on Neural Information Processing Systems(",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/CLIPSAM.PNG",
+    "hrefs": [
+      "https://openreview.net/pdf?id=C8JdyM7B8I"
+    ]
+  },
+  {
+    "title": "See More and Know More: Zero-shot Point Cloud Segmentation via Multi-modal Visual Data",
+    "authors": "Yuhang Lu, Qi Jiang, Runnan Chen, Yuenan Hou, Xinge Zhu, Yuexin Ma*.",
+    "venue": "International Conference on Computer Vision(",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/zeroshotCVPR23.PNG",
+    "hrefs": [
+      "https://openaccess.thecvf.com/content/ICCV2023/papers/Lu_See_More_and_Know_More_Zero-shot_Point_Cloud_Segmentation_via_ICCV_2023_paper.pdf"
+    ]
+  },
+  {
+    "title": "Human-centric Scene Understanding in 3D Large-scale Scenarios",
+    "authors": "Yiteng Xu, Peishan Cong, Yichen Yao, Runnan Chen, Yuenan Hou, Xinge Zhu, Xuming He, Jingyi Yu, Yuexin Ma*.",
+    "venue": "International Conference on Computer Vision(",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/hucenlifeCVPR23.PNG",
+    "hrefs": [
+      "https://openaccess.thecvf.com/content/ICCV2023/papers/Xu_Human-centric_Scene_Understanding_for_3D_Large-scale_Scenarios_ICCV_2023_paper.pdf"
+    ]
+  },
+  {
+    "title": "Rethinking Range View Representation for LiDAR Segmentation",
+    "authors": "Lingdong Kong, Youquan Liu, Runnan Chen, Yuexin Ma, Xinge Zhu, Yuenan Hou, Yikang Li, Yu Qiao, Ziwei Liu.",
+    "venue": "International Conference on Computer Vision(",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/rangeCVPR23.PNG",
+    "hrefs": []
+  },
+  {
+    "title": "UniSeg: A Unified Multi-Modal LiDAR Segmentation Network and the OpenPCSeg Codebase",
+    "authors": "Youquan Liu, Runnan Chen, Xin Li, Lingdong Kong, Yuchen Yang, Zhaoyang Xia, Yeqi Bai, Xinge Zhu, Yuexin Ma, Yikang Li, Yuenan Hou, Yu Qiao.",
+    "venue": "International Conference on Computer Vision(",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/unisegCVPR23.PNG",
+    "hrefs": []
+  },
+  {
+    "title": "ContrastMotion: Self-supervised Scene Motion Learning for Large-Scale LiDAR Point Clouds",
+    "authors": "Xiangze Jia, Hui Zhou, Xinge Zhu, Yandong Guo, Ji Zhang Yuexin Ma*.",
+    "venue": "International Joint Conference on Artificial Intelligence(",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/ContrastMotion.PNG",
+    "hrefs": [
+      "https://arxiv.org/pdf/2304.12589.pdf"
+    ]
+  },
+  {
+    "title": "LiDAR-aid Inertial Poser: Large-scale Human Motion Capture by Sparse Inertial and LiDAR Sensors",
+    "authors": "Yiming Ren, Chengfeng Zhao, Yannan He, Peishan Cong, Han Liang, Jingyi Yu, Lan Xu*, Yuexin Ma*.",
+    "venue": "IEEE Transactions on Visualization and Computer Graphics(",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/LIP.PNG",
+    "hrefs": [
+      "https://arxiv.org/abs/2205.15410"
+    ]
+  },
+  {
+    "title": "One Training for Multiple Deployments: Polar-based Adaptive BEV Perception for Autonomous Driving",
+    "authors": "Huitong Yang, Xuyang Bai, Xinge Zhu, Yuexin Ma*.",
+    "venue": "International Conference on Robotics and Automation(",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/OTMD.PNG",
+    "hrefs": [
+      "https://arxiv.org/abs/2212.00244"
+    ]
+  },
+  {
+    "title": "CL3D: Unsupervised Domain Adaptation for Cross-LiDAR 3D Detection",
+    "authors": "Xidong Peng, Xinge Zhu, Yuexin Ma*.",
+    "venue": "Thirty-Seventh AAAI Conference on Artificial Intelligence(",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/CL3D.PNG",
+    "hrefs": [
+      "https://arxiv.org/abs/2212.00244",
+      "https://github.com/4DVLab/CL3D"
+    ]
+  },
+  {
+    "title": "Weakly Supervised 3D Multi-person Pose Estimation for Large-scale Scenes based on Monocular Camera and Single LiDAR",
+    "authors": "Peishan Cong, Yiteng Xu, Yiming Ren, Juze Zhang, Lan Xu, Jingya Wang, Jingyi Yu, Yuexin Ma*.",
+    "venue": "Thirty-Seventh AAAI Conference on Artificial Intelligence(",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/FusionPose.PNG",
+    "hrefs": [
+      "https://arxiv.org/abs/2211.16951",
+      "https://github.com/4DVLab/FusionPose"
+    ]
+  },
+  {
+    "title": "STCrowd: A Multimodal Dataset for Pedestrian Perception in Crowded Scenes",
+    "authors": "Peishan Cong, Xinge Zhu, Feng Qiao, Yiming Ren, Xidong Peng, Yuenan Hou, Lan Xu, Ruigang Yang, Dinesh Manocha, Yuexin Ma*.",
+    "venue": "IEEE Conference on Computer Vision and Pattern Recognition(",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/stcrowd.PNG",
+    "hrefs": [
+      "https://arxiv.org/abs/2204.01026",
+      "https://github.com/4DVLab/STCrowd"
+    ]
+  },
+  {
+    "title": "HSC4D: Human-centered 4D Scene Capture in Large-scale Indoor-outdoor Space UsingWearable IMUs and LiDAR",
+    "authors": "Yudi Dai, Yitai Lin, Chenglu Wen, Siqi Shen, Lan Xu, Jingyi Yu, Yuexin Ma, Cheng Wang.",
+    "venue": "IEEE Conference on Computer Vision and Pattern Recognition(",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/HSC4D.PNG",
+    "hrefs": [
+      "https://arxiv.org/abs/2203.09215",
+      "https://github.com/climbingdaily/hsc4d"
+    ]
+  },
+  {
+    "title": "LiDARCap: Long-range Marker-less 3D Human Motion Capture with LiDAR Point Clouds",
+    "authors": "Jialian Li, Jingyi Zhang, Zhiyong Wang, Siqi Shen, Chenglu Wen, Yuexin Ma, Lan Xu, Jingyi Yu, Cheng Wang.",
+    "venue": "IEEE Conference on Computer Vision and Pattern Recognition(",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/LiDARcap.PNG",
+    "hrefs": [
+      "https://arxiv.org/abs/2203.14698",
+      "http://www.lidarhumanmotion.net/lidarcap/"
+    ]
+  },
+  {
+    "title": "Point-to-Voxel Knowledge Distillation for LiDAR Semantic Segmentation",
+    "authors": "Yuenan Hou, Xinge Zhu, Yuexin Ma, Chen Change Loy, and Yikang Li.",
+    "venue": "IEEE Conference on Computer Vision and Pattern Recognition(",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/Distillation.PNG",
+    "hrefs": []
+  },
+  {
+    "title": "Structure-Aware Long Short-Term Memory Network for 3D Cephalometric Landmark Detection",
+    "authors": "Runnan Chen, Yuexin Ma, Nenglun Chen, Lingjie Liu, Zhiming Cui, Yanhong Lin, Wenping Wang.",
+    "venue": "IEEE Transactions on Medical Imaging(",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/TMI.PNG",
+    "hrefs": [
+      "https://ieeexplore.ieee.org/abstract/document/9705609"
+    ]
+  },
+  {
+    "title": "AdaStereo: An Efficient Domain-Adaptive Stereo Matching Approach",
+    "authors": "Xiao Song, Guorun Yang, Xinge Zhu, Hui Zhou, Yuexin Ma, Zhe Wang, Jianping Shi.",
+    "venue": "International Journal of Computer Vision(",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/adastereo.png",
+    "hrefs": [
+      "https://link.springer.com/article/10.1007/s11263-021-01549-6"
+    ]
+  },
+  {
+    "title": "Self-supervised Point Cloud Completion on Real Traffic Scenes via Scene-concerned Bottom-up Mechanism",
+    "authors": "Yiming Ren, Peishan Cong, Xinge Zhu, Yuexin Ma*",
+    "venue": "IEEE International Conference on Multimedia and Expo(",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/completion.PNG",
+    "hrefs": [
+      "https://arxiv.org/abs/2203.10569"
+    ]
+  },
+  {
+    "title": "SIDE: Center-based Stereo 3D Detector with Structure-awareInstance Depth Estimation",
+    "authors": "Xidong Peng, Xinge Zhu, Tai Wang, Yuexin Ma*.",
+    "venue": "Winter Conference on Applications of Computer Vision (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/side.png",
+    "hrefs": [
+      "https://arxiv.org/abs/2108.09663",
+      "https://github.com/linmo2333/SIDE"
+    ]
+  },
+  {
+    "title": "Cylindrical and Asymmetrical 3D Convolution Networks for LiDAR-based Perception",
+    "authors": "Xinge Zhu, Hui Zhou, Tai Wang, Fangzhou Hong, Wei Li, Yuexin Ma*, Hongsheng Li, Ruigang Yang, Dahua Lin",
+    "venue": "IEEE Transactions on Pattern Analysis and Machine Intelligence (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/cylinder2.png",
+    "hrefs": [
+      "https://arxiv.org/pdf/2109.05441",
+      "https://github.com/xinge008/Cylinder3D"
+    ]
+  },
+  {
+    "title": "Cylindrical and Asymmetrical 3D Convolution Networks for LiDAR Segmentation",
+    "authors": "Xinge Zhu, Hui Zhou, Tai Wang, Fangzhou Hong, Yuexin Ma, Wei Li, Hongsheng Li, Dahua Lin",
+    "venue": "IEEE Conference on Computer Vision and Pattern Recognition(",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/cylinder.png",
+    "hrefs": [
+      "https://arxiv.org/pdf/2011.10033",
+      "https://github.com/xinge008/Cylinder3D"
+    ]
+  },
+  {
+    "title": "Projecting Your View Attentively: Monocular Road Scene Layout Estimation via Cross-view Transformation.",
+    "authors": "Weixiang Yang, Qi Li, Wenxi Liu, Yuanlong Yu, Yuexin Ma, Shengfeng He, Jia Pan.",
+    "venue": "IEEE Conference on Computer Vision and Pattern Recognition(",
+    "img": "http://yuexinma.me/zxg_css/img/projecting.PNG",
+    "hrefs": [
+      "https://openaccess.thecvf.com/content/CVPR2021/papers/Yang_Projecting_Your_View_Attentively_Monocular_Road_Scene_Layout_Estimation_via_CVPR_2021_paper.pdf",
+      "https://github.com/JonDoe-297/cross-view"
+    ]
+  },
+  {
+    "title": "Input-Output Balanced Framework for Long-tailed LiDAR Semantic Segmentation",
+    "authors": "Peishan Cong, Xinge Zhu, Yuexin Ma",
+    "venue": "IEEE International Conference on Multimedia and Expo (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/icme2021.png",
+    "hrefs": [
+      "https://arxiv.org/pdf/2103.14269"
+    ]
+  },
+  {
+    "title": "SSN: Shape Signature Networks for Multi-class Object Detection from Point Clouds",
+    "authors": "Xinge Zhu, Yuexin Ma, Tai Wang, Yan Xu, Jianping Shi, Dahua Lin",
+    "venue": "European Conference on Computer Vision (",
+    "img": "http://yuexinma.me/uploads/new/zxg_css/img/ssn.png",
+    "hrefs": [
+      "https://arxiv.org/pdf/2004.02774",
+      "https://github.com/xinge008/SSN"
+    ]
+  },
+  {
+    "title": "AADS: Augmented autonomous driving simulation using data-driven algorithms",
+    "authors": "Wei Li, Chengwei Pan, Rong Zhang, Jiaping Ren, Yuexin Ma, Jin Fang, Feilong Yan, Qichuan Geng, Xinyu Huang, Huajun Gong, Weiwei Xu, Guoping Wang, Dinesh Manocha, Ruigang Yang.",
+    "venue": "Science Robotics, 2019",
+    "img": "http://yuexinma.me/zxg_css/img/AADS.PNG",
+    "hrefs": [
+      "https://www.science.org/doi/10.1126/scirobotics.aaw0863"
+    ]
+  },
+  {
+    "title": "Cross-modal Consensus Network for Weakly SupervisedTemporal Action Localization",
+    "authors": "Fa-Ting Hong, Jia-Chang Feng, Dan Xu, Ying Shan Wei-Shi Zheng",
+    "venue": "ACM Interntional Conference on Multimedia (",
+    "img": "http://yuexinma.me/uploads/2021/densecorres_cvpr21.jpg",
+    "hrefs": [
+      "https://arxiv.org/pdf/2103.16341.pdf",
+      "https://tangjiapeng.github.io/LPDC-Net",
+      "https://github.com/tangjiapeng/LPDC-Net",
+      "https://arxiv.org/pdf/2007.05719",
+      "https://ojs.aaai.org/index.php/AAAI/article/view/4569/4447",
+      "https://arxiv.org/abs/1802.01873"
+    ]
+  }
+]

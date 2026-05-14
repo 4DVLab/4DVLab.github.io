@@ -1,226 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="index, follow">
-
-    <title>4DV LAB</title>
-    <meta name="description" content="">
-    <link rel="alternate" type="application/rss+xml" href="/feed.xml">
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="/css/main.css" rel='stylesheet' type='text/css'>
-
-    <!-- Google Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet'
-        type='text/css'>
-
-    <!-- Favicon -->
-    <!-- <link rel="shortcut icon" href="/imgs/logo.png"> -->
-    <style>
-        :root {
-            --paper-link: #f2b84b;
-            --paper-link-hover: #ffd782;
-            --paper-accent: #ff5f5f;
-        }
-
-        .publication-item {
-            margin-bottom: 24px;
-        }
-
-        .publication-list {
-            display: grid;
-            gap: 16px;
-            margin-bottom: 36px;
-        }
-
-        .year-group {
-            margin-bottom: 30px;
-        }
-
-        .year-divider {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin: 18px 0 8px;
-        }
-
-        .year-divider::after {
-            content: "";
-            flex: 1;
-            height: 1px;
-            background: rgba(255, 255, 255, 0.14);
-        }
-
-        .year-label {
-            color: white;
-            font-size: 24px;
-            font-weight: 700;
-            letter-spacing: 0.02em;
-            white-space: nowrap;
-        }
-
-        .year-count {
-            color: rgba(255, 255, 255, 0.68);
-            font-size: 14px;
-            font-weight: 500;
-            white-space: nowrap;
-        }
-
-        .pub-entry {
-            padding: 14px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
-        }
-
-        .pub-entry:first-child {
-            border-top: none;
-        }
-
-        .pub-title {
-            color: white;
-            font-size: 22px;
-            line-height: 1.35;
-            font-weight: 600;
-        }
-
-        .pub-authors {
-            margin-top: 4px;
-            color: rgba(255, 255, 255, 0.78);
-            font-size: 15px;
-            line-height: 1.55;
-        }
-
-        .pub-meta {
-            margin-top: 6px;
-        }
-
-        .paper-meta {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            column-gap: 14px;
-            row-gap: 4px;
-            line-height: 1.6;
-        }
-
-        .paper-meta strong,
-        .paper-meta .paper-links {
-            display: inline-flex;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .paper-meta br {
-            display: none;
-        }
-
-        .pub-links {
-            margin-left: 12px;
-        }
-
-        .pub-links a {
-            margin-right: 10px;
-            color: var(--paper-link) !important;
-        }
-
-        .publication-item .media-body {
-            display: grid;
-            grid-template-columns: minmax(180px, 25%) 1fr;
-            column-gap: 24px;
-            align-items: start;
-            width: auto;
-            overflow: visible;
-        }
-
-        .publication-item .media-body > .col-xs-3 {
-            grid-column: 1;
-            grid-row: 1 / span 2;
-            width: auto;
-            padding-left: 0;
-            padding-right: 0;
-            float: none;
-        }
-
-        .publication-item .media-body > .media-heading,
-        .publication-item .media-body > .paper-meta {
-            grid-column: 2;
-        }
-
-        .publication-item .media-heading,
-        .publication-item .media-heading small,
-        .publication-item .paper-meta,
-        .publication-item .paper-meta font {
-            color: white;
-        }
-
-        .publication-item .media-heading {
-            line-height: 1.35;
-        }
-
-        .publication-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 12px;
-        }
-
-        .paper-links a {
-            color: var(--paper-link) !important;
-            transition: color 0.2s ease;
-        }
-
-        .paper-links a:hover {
-            color: var(--paper-link-hover) !important;
-        }
-
-        .conference-tag {
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--paper-accent) !important;
-        }
-
-        .conference-tag.is-award {
-            color: #ffd782 !important;
-        }
-
-        @media (max-width: 768px) {
-            .publication-item .media-body {
-                grid-template-columns: 1fr;
-                row-gap: 12px;
-            }
-
-            .publication-item .media-body > .col-xs-3,
-            .publication-item .media-body > .media-heading,
-            .publication-item .media-body > .paper-meta {
-                grid-column: 1;
-                grid-row: auto;
-            }
-        }
-    </style>
-</head>
-
-<body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top" style="background-color: black;">
-    <div class="navigation"></div>
-    <div class="news top-container">
-        <div class="container-fluid">
-            <div class="post">
-                
-                <h2>
-                    <font color="white">Selected Publications</font>
-                    <small style="margin-left: 12px; font-size: 18px;">
-                        <a href="https://scholar.google.com/citations?user=DIsP7rUAAAAJ&hl=zh-CN" target="_blank" style="color: #f2b84b; text-decoration: none;">Complete List</a>
-                    </small>
-                </h2>
+                <h2><font color="white">Recent Publications</font></h2>
                 <hr />
-                    <div class="year-group">
-                        <div class="year-divider">
-                            <span class="year-label">2026</span>
-                            <span class="year-count">8 papers</span>
-                        </div>
+                <div class="year-group">
+                    <div class="year-divider">
+                        <span class="year-label">2026</span>
+                        <span class="year-count">7 papers</span>
+                    </div>
                     <div class="media publication-item" id="res-vla">
                         <div class="media-body">
                             <div class="col-xs-3">
@@ -326,27 +110,6 @@
                         </div>
                     </div>
 
-                    <div class="media publication-item" id="socialmirror">
-                        <div class="media-body">
-                            <div class="col-xs-3">
-                                <img src="imgs/paper_fig/socialMirror.png">
-                            </div>
-
-                            <h4 class="media-heading">
-                                SocialMirror: Reconstructing 3D Human Interaction Behaviors from Monocular Videos with Semantic and Geometric Guidance<br>
-                                <small>Qi Xia, Peishan Cong, Ziyi Wang, Yujing Sun, Qin Sun, Xinge Zhu, Mao Ye, Ruigang Yang, Yuexin Ma.</small>
-                            </h4>
-
-                            <small class="paper-meta">
-                                <strong>
-                                    <font class="conference-tag">CVPR 2026</font>
-                                </strong>
-                                <br>
-                                <span class="paper-links"><a href="https://arxiv.org/abs/2604.13581" target="_blank">[Paper]</a></span>
-                            </small>
-                        </div>
-                    </div>
-
                     <div class="media publication-item" id="affordance-r1">
                         <div class="media-body">
                             <div class="col-xs-3">
@@ -360,7 +123,7 @@
 
                             <small class="paper-meta">
                                 <strong>
-                                    <font class="conference-tag is-award">AAAI 2026 Oral</font>
+                                    <font class="conference-tag">AAAI 2026</font>
                                 </strong>
                                 <br>
                                 <span class="paper-links"><a href="https://arxiv.org/pdf/2508.06206" target="_blank">[Paper]</a> <a href="#affordance-r1">[Home Page]</a></span>
@@ -391,11 +154,11 @@
 
                 </div>
 
-                    <div class="year-group">
-                        <div class="year-divider">
-                            <span class="year-label">2025</span>
-                            <span class="year-count">15 papers</span>
-                        </div>
+                <div class="year-group">
+                    <div class="year-divider">
+                        <span class="year-label">2025</span>
+                        <span class="year-count">18 papers</span>
+                    </div>
                     <div class="media publication-item" id="freqpolicy">
                         <div class="media-body">
                             <div class="col-xs-3">
@@ -424,13 +187,13 @@
                             </div>
 
                             <h4 class="media-heading">
-                                MOSPA: Spatial Audio-Driven Human Motion Generation<br>
+                                MOSPA: Human Motion Generation Driven by Spatial Audio<br>
                                 <small>Shuyang Xu*, Zhiyang Dou*, Mingyi Shi, Liang Pan, Leo Ho, Jingbo Wang, Yuan Liu, Cheng Lin, Yuexin Ma, Wenping Wang, Taku Komura.</small>
                             </h4>
 
                             <small class="paper-meta">
                                 <strong>
-                                    <font class="conference-tag is-award">NeurIPS 2025 Spotlight</font>
+                                    <font class="conference-tag">NeurIPS 2025</font>
                                 </strong>
                                 <br>
                                 <span class="paper-links"><a href="https://arxiv.org/abs/2507.11949" target="_blank">[Paper]</a> <a href="https://frank-zy-dou.github.io/projects/MOSPA/" target="_blank">[Home Page]</a></span>
@@ -522,6 +285,27 @@
                         </div>
                     </div>
 
+                    <div class="media publication-item" id="immersive-hx">
+                        <div class="media-body">
+                            <div class="col-xs-3">
+                                <img src="imgs/paper_fig/immersive-hx.png">
+                            </div>
+
+                            <h4 class="media-heading">
+                                Towards Immersive Human-X Interaction: A Real-Time Framework for Physically Plausible Motion Synthesis<br>
+                                <small>Kaiyang Ji, Ye Shi, Zichen Jin, Kangyi Chen, Lan Xu, Yuexin Ma, Jingyi Yu, Jingya Wang.</small>
+                            </h4>
+
+                            <small class="paper-meta">
+                                <strong>
+                                    <font class="conference-tag">ICCV 2025</font>
+                                </strong>
+                                <br>
+                                <span class="paper-links"><a href="#immersive-hx">[Home Page]</a></span>
+                            </small>
+                        </div>
+                    </div>
+
                     <div class="media publication-item" id="stage">
                         <div class="media-body">
                             <div class="col-xs-3">
@@ -535,10 +319,35 @@
 
                             <small class="paper-meta">
                                 <strong>
-                                    <font class="conference-tag is-award">IROS 2025 Oral</font>
+                                    <font class="conference-tag">IROS 2025</font>
                                 </strong>
                                 <br>
+                                <span class="highlight-badge">Oral</span>
+                                <br>
                                 <span class="paper-links"><a href="https://arxiv.org/pdf/2506.13138" target="_blank">[Paper]</a> <a href="https://4dvlab.github.io/STAGE/" target="_blank">[Home Page]</a></span>
+                            </small>
+                        </div>
+                    </div>
+
+                    <div class="media publication-item" id="label-free-grounding">
+                        <div class="media-body">
+                            <div class="col-xs-3">
+                                <img src="imgs/paper_fig/label-free-grounding.png">
+                            </div>
+
+                            <h4 class="media-heading">
+                                Towards Label-Free 3D Visual Grounding with Vision Foundation Models<br>
+                                <small>Xiaopei Wu, Yuenan Hou, Binbin Lin, Xinge Zhu, Yuexin Ma, Haifeng Liu, Deng Cai, Xiao Sun.</small>
+                            </h4>
+
+                            <small class="paper-meta">
+                                <strong>
+                                    <font class="conference-tag">IROS 2025</font>
+                                </strong>
+                                <br>
+                                <span class="highlight-badge">Oral</span>
+                                <br>
+                                <span class="paper-links"><a href="#label-free-grounding">[Home Page]</a></span>
                             </small>
                         </div>
                     </div>
@@ -556,7 +365,7 @@
 
                             <small class="paper-meta">
                                 <strong>
-                                    <font class="conference-tag is-award">CVPR 2025 Highlight</font>
+                                    <font class="conference-tag">CVPR 2025</font>
                                 </strong>
                                 <br>
                                 <span class="paper-links"><a href="https://arxiv.org/abs/2503.08257" target="_blank">[Paper]</a> <a href="https://dexgraspanything.github.io/" target="_blank">[Home Page]</a></span>
@@ -602,6 +411,48 @@
                                 </strong>
                                 <br>
                                 <span class="paper-links"><a href="https://arxiv.org/pdf/2411.14280" target="_blank">[Paper]</a> <a href="#easyhoi">[Home Page]</a></span>
+                            </small>
+                        </div>
+                    </div>
+
+                    <div class="media publication-item" id="occmamba">
+                        <div class="media-body">
+                            <div class="col-xs-3">
+                                <img src="imgs/paper_fig/occmamba.png">
+                            </div>
+
+                            <h4 class="media-heading">
+                                OccMamba: Semantic Occupancy Prediction with State Space Models<br>
+                                <small>Heng Li, Yuenan Hou, Xiaohan Xing, Yuexin Ma, Xiao Sun, Yanyong Zhang.</small>
+                            </h4>
+
+                            <small class="paper-meta">
+                                <strong>
+                                    <font class="conference-tag">CVPR 2025</font>
+                                </strong>
+                                <br>
+                                <span class="paper-links"><a href="https://arxiv.org/abs/2408.09859" target="_blank">[Paper]</a> <a href="#occmamba">[Home Page]</a></span>
+                            </small>
+                        </div>
+                    </div>
+
+                    <div class="media publication-item" id="climbingcap">
+                        <div class="media-body">
+                            <div class="col-xs-3">
+                                <img src="imgs/paper_fig/climbingcap.png">
+                            </div>
+
+                            <h4 class="media-heading">
+                                ClimbingCap: Multi-Modal Dataset and Method for Rock Climbing in World Coordinate<br>
+                                <small>Ming Yan, Xincheng Lin, Yuhua Luo, Shuqi Fan, Yudi Dai, Qixin Zhong, Lincai Zhong, Yuexin Ma, Lan Xu, Chenglu Wen, Siqi Shen, Cheng Wang.</small>
+                            </h4>
+
+                            <small class="paper-meta">
+                                <strong>
+                                    <font class="conference-tag">CVPR 2025</font>
+                                </strong>
+                                <br>
+                                <span class="paper-links"><a href="#climbingcap">[Home Page]</a></span>
                             </small>
                         </div>
                     </div>
@@ -690,36 +541,12 @@
                         </div>
                     </div>
 
-                    <div class="media publication-item" id="unidemoire">
-                        <div class="media-body">
-                            <div class="col-xs-3">
-                                <img src="imgs/paper_fig/unidemoire.png">
-                            </div>
-
-                            <h4 class="media-heading">
-                                UniDemoire: Towards Universal Image Demoiring with Data Generation and Synthesis<br>
-                                <small>Zemin Yang, Yujing Sun, Xidong Peng, Siu Ming Yiu, Yuexin Ma*.</small>
-                            </h4>
-
-                            <small class="paper-meta">
-                                <strong>
-                                    <font class="conference-tag">AAAI 2025</font>
-                                </strong>
-                                <br>
-                                <span class="paper-links">
-                                    <a href="https://yizhifengyeyzm.github.io/UniDemoire-page/" target="_blank">[Home Page]</a>
-                                    <a href="https://arxiv.org/pdf/2502.06324" target="_blank">[Paper]</a>
-                                </span>
-                            </small>
-                        </div>
-                    </div>
-
                 </div>
 
-                    <div class="year-group">
-                        <div class="year-divider">
-                            <span class="year-label">2024</span>
-                        <span class="year-count">15 papers</span>
+                <div class="year-group">
+                    <div class="year-divider">
+                        <span class="year-label">2024</span>
+                        <span class="year-count">13 papers</span>
                     </div>
                     <div class="media publication-item" id="rocosdf">
                         <div class="media-body">
@@ -734,8 +561,10 @@
 
                             <small class="paper-meta">
                                 <strong>
-                                    <font class="conference-tag is-award">MICCAI 2024 Best Paper Award</font>
+                                    <font class="conference-tag">MICCAI 2024</font>
                                 </strong>
+                                <br>
+                                <span class="highlight-badge">Best Paper Award</span>
                                 <br>
                                 <span class="paper-links"><a href="https://link.springer.com/chapter/10.1007/978-3-031-72083-3_67" target="_blank">[Paper]</a> <a href="#rocosdf">[Home Page]</a></span>
                             </small>
@@ -755,8 +584,10 @@
 
                             <small class="paper-meta">
                                 <strong>
-                                    <font class="conference-tag is-award">MM 2024 Oral, Best Paper Nomination</font>
+                                    <font class="conference-tag">MM 2024</font>
                                 </strong>
+                                <br>
+                                <span class="highlight-badge">Oral, Best Paper Nomination</span>
                                 <br>
                                 <span class="paper-links"><a href="/project_page/FreeGait.html" target="_blank">[Home Page]</a></span>
                             </small>
@@ -839,8 +670,10 @@
 
                             <small class="paper-meta">
                                 <strong>
-                                    <font class="conference-tag is-award">MM 2024 Oral</font>
+                                    <font class="conference-tag">MM 2024</font>
                                 </strong>
+                                <br>
+                                <span class="highlight-badge">Oral</span>
                                 <br>
                                 <span class="paper-links"><a href="/project_page/LiDARHMP.html" target="_blank">[Home Page]</a></span>
                             </small>
@@ -860,8 +693,10 @@
 
                             <small class="paper-meta">
                                 <strong>
-                                    <font class="conference-tag is-award">ECCV 2024 Oral</font>
+                                    <font class="conference-tag">ECCV 2024</font>
                                 </strong>
+                                <br>
+                                <span class="highlight-badge">Oral</span>
                                 <br>
                                 <span class="paper-links"><a href="https://arxiv.org/abs/2407.09833" target="_blank">[Paper]</a> <a href="/project_page/LiveHPS2.html" target="_blank">[Home Page]</a></span>
                             </small>
@@ -910,6 +745,48 @@
                         </div>
                     </div>
 
+                    <div class="media publication-item" id="geowizard">
+                        <div class="media-body">
+                            <div class="col-xs-3">
+                                <img src="imgs/paper_fig/geowizard.png">
+                            </div>
+
+                            <h4 class="media-heading">
+                                GeoWizard: Unleashing the Diffusion Priors for 3D Geometry Estimation from a Single Image<br>
+                                <small>Xiao Fu, Mu Hu, Wei Yin, Kaixuan Wang, Yuexin Ma, Ping Tan, Shaojie Shen, Dahua Lin, Xiaoxiao Long.</small>
+                            </h4>
+
+                            <small class="paper-meta">
+                                <strong>
+                                    <font class="conference-tag">ECCV 2024</font>
+                                </strong>
+                                <br>
+                                <span class="paper-links"><a href="#geowizard">[Home Page]</a></span>
+                            </small>
+                        </div>
+                    </div>
+
+                    <div class="media publication-item" id="part2object">
+                        <div class="media-body">
+                            <div class="col-xs-3">
+                                <img src="imgs/paper_fig/part2object.png">
+                            </div>
+
+                            <h4 class="media-heading">
+                                Part2Object: Hierarchical Unsupervised 3D Instance Segmentation<br>
+                                <small>Cheng Shi, Yulin Zhang, Bin Yang, Jiajin Tang, Yuexin Ma, Sibei Yang.</small>
+                            </h4>
+
+                            <small class="paper-meta">
+                                <strong>
+                                    <font class="conference-tag">ECCV 2024</font>
+                                </strong>
+                                <br>
+                                <span class="paper-links"><a href="#part2object">[Home Page]</a></span>
+                            </small>
+                        </div>
+                    </div>
+
                     <div class="media publication-item" id="realdex">
                         <div class="media-body">
                             <div class="col-xs-3">
@@ -952,108 +829,12 @@
                         </div>
                     </div>
 
-                    <div class="media publication-item" id="livehps">
-                        <div class="media-body">
-                            <div class="col-xs-3">
-                                <img src="imgs/paper_fig/livehps.png">
-                            </div>
-
-                            <h4 class="media-heading">
-                                LiveHPS: LiDAR-based Scene-level Human Pose and Shape Estimation in Free Environment<br>
-                                <small>Yiming Ren, Xiao Han, Chengfeng Zhao, Jingya Wang, Lan Xu, Jingyi Yu, Yuexin Ma</small>
-                            </h4>
-
-                            <small class="paper-meta">
-                                <strong>
-                                    <font class="conference-tag is-award">CVPR 2024 Highlight</font>
-                                </strong>
-                                <br>
-                                <span class="paper-links">
-                                    <a href="/project_page/LiveHPS.html" target="_blank">[Home Page]</a>
-                                    <a href="https://arxiv.org/abs/2402.17171" target="_blank">[Paper]</a>
-                                </span>
-                            </small>
-                        </div>
-                    </div>
-
-                    <div class="media publication-item" id="hunter">
-                        <div class="media-body">
-                            <div class="col-xs-3">
-                                <img src="imgs/paper_fig/hunter.png">
-                            </div>
-
-                            <h4 class="media-heading">
-                                HUNTER: Unsupervised Human-centric 3D Detection via Transferring Knowledge from Synthetic Instances to Real Scenes<br>
-                                <small>Yichen Yao, Zimo Jiang, YUJING SUN, Zhencai Zhu, Xinge ZHU, Runnan Chen, Yuexin Ma</small>
-                            </h4>
-
-                            <small class="paper-meta">
-                                <strong>
-                                    <font class="conference-tag">CVPR 2024</font>
-                                </strong>
-                                <br>
-                                <span class="paper-links">
-                                    <a href="#hunter">[Home Page]</a>
-                                    <a href="https://arxiv.org/abs/2403.02769" target="_blank">[Paper]</a>
-                                </span>
-                            </small>
-                        </div>
-                    </div>
-
-                    <div class="media publication-item" id="unified-pcu">
-                        <div class="media-body">
-                            <div class="col-xs-3">
-                                <img src="imgs/paper_fig/unified.png">
-                            </div>
-
-                            <h4 class="media-heading">
-                                A Unified Framework for Human-centric Point Cloud Video Understanding<br>
-                                <small>Yiteng Xu, Kecheng Ye, Xiao Han, Yiming Ren, Xinge ZHU, Yuexin Ma</small>
-                            </h4>
-
-                            <small class="paper-meta">
-                                <strong>
-                                    <font class="conference-tag">CVPR 2024</font>
-                                </strong>
-                                <br>
-                                <span class="paper-links">
-                                    <a href="#unified-pcu">[Home Page]</a>
-                                    <a href="https://arxiv.org/abs/2403.20031" target="_blank">[Paper]</a>
-                                </span>
-                            </small>
-                        </div>
-                    </div>
-
-                    <div class="media publication-item" id="gaussianshader">
-                        <div class="media-body">
-                            <div class="col-xs-3">
-                                <img src="imgs/paper_fig/gauss.png">
-                            </div>
-
-                            <h4 class="media-heading">
-                                GaussianShader: 3D Gaussian Splatting with Shading Functions for Reflective Surfaces<br>
-                                <small>YingWenQi Jiang, Jiadong Tu, Yuan Liu, Xifeng Gao, Xiaoxiao Long, Wenping Wang, Yuexin Ma</small>
-                            </h4>
-
-                            <small class="paper-meta">
-                                <strong>
-                                    <font class="conference-tag">CVPR 2024</font>
-                                </strong>
-                                <br>
-                                <span class="paper-links">
-                                    <a href="https://asparagus15.github.io/GaussianShader.github.io/" target="_blank">[Home Page]</a>
-                                    <a href="https://arxiv.org/abs/2311.17977" target="_blank">[Paper]</a>
-                                </span>
-                            </small>
-                        </div>
-                    </div>
-
                 </div>
 
                 <div class="year-group">
                     <div class="year-divider">
                         <span class="year-label">2023</span>
-                        <span class="year-count">8 papers</span>
+                        <span class="year-count">4 papers</span>
                     </div>
                     <div class="media publication-item" id="label-free-scene">
                         <div class="media-body">
@@ -1072,6 +853,48 @@
                                 </strong>
                                 <br>
                                 <span class="paper-links"><a href="https://openreview.net/pdf?id=C8JdyM7B8I" target="_blank">[Paper]</a> <a href="#label-free-scene">[Home Page]</a></span>
+                            </small>
+                        </div>
+                    </div>
+
+                    <div class="media publication-item" id="range-view">
+                        <div class="media-body">
+                            <div class="col-xs-3">
+                                <img src="imgs/paper_fig/range-view.png">
+                            </div>
+
+                            <h4 class="media-heading">
+                                Rethinking Range View Representation for LiDAR Segmentation<br>
+                                <small>Lingdong Kong, Youquan Liu, Runnan Chen, Yuexin Ma, Xinge Zhu, Yuenan Hou, Yikang Li, Yu Qiao, Ziwei Liu.</small>
+                            </h4>
+
+                            <small class="paper-meta">
+                                <strong>
+                                    <font class="conference-tag">ICCV 2023</font>
+                                </strong>
+                                <br>
+                                <span class="paper-links"><a href="#range-view">[Home Page]</a></span>
+                            </small>
+                        </div>
+                    </div>
+
+                    <div class="media publication-item" id="uniseg">
+                        <div class="media-body">
+                            <div class="col-xs-3">
+                                <img src="imgs/paper_fig/uniseg.png">
+                            </div>
+
+                            <h4 class="media-heading">
+                                UniSeg: A Unified Multi-Modal LiDAR Segmentation Network and the OpenPCSeg Codebase<br>
+                                <small>Youquan Liu, Runnan Chen, Xin Li, Lingdong Kong, Yuchen Yang, Zhaoyang Xia, Yeqi Bai, Xinge Zhu, Yuexin Ma, Yikang Li, Yuenan Hou, Yu Qiao.</small>
+                            </h4>
+
+                            <small class="paper-meta">
+                                <strong>
+                                    <font class="conference-tag">ICCV 2023</font>
+                                </strong>
+                                <br>
+                                <span class="paper-links"><a href="#uniseg">[Home Page]</a></span>
                             </small>
                         </div>
                     </div>
@@ -1097,276 +920,4 @@
                         </div>
                     </div>
 
-                    <div class="media publication-item" id="see-more-know-more">
-                        <div class="media-body">
-                            <div class="col-xs-3">
-                                <img src="imgs/paper_fig/seemore.png">
-                            </div>
-
-                            <h4 class="media-heading">
-                                See More and Know More: Zero-shot Point Cloud Segmentation via Multi-modal Visual Data<br>
-                                <small>Yuhang Lu, Qi Jiang, Runnan Chen, Yuenan Hou, Xinge Zhu, Yuexin Ma</small>
-                            </h4>
-
-                            <small class="paper-meta">
-                                <strong>
-                                    <font class="conference-tag">ICCV 2023</font>
-                                </strong>
-                                <br>
-                                <span class="paper-links">
-                                    <a href="#see-more-know-more">[Home Page]</a>
-                                    <a href="https://arxiv.org/pdf/2307.10782" target="_blank">[Paper]</a>
-                                </span>
-                            </small>
-                        </div>
-                    </div>
-
-                    <div class="media publication-item" id="hucenlife">
-                        <div class="media-body">
-                            <div class="col-xs-3">
-                                <img src="imgs/paper_fig/hucenlife.png">
-                            </div>
-
-                            <h4 class="media-heading">
-                                Human-centric Scene Understanding in 3D Large-scale Scenarios<br>
-                                <small>Yiteng Xu, Peishan Cong, Yichen Yao, Runnan Chen, Yuenan Hou, Xinge Zhu, Xuming He, Jingyi Yu, Yuexin Ma</small>
-                            </h4>
-
-                            <small class="paper-meta">
-                                <strong>
-                                    <font class="conference-tag">ICCV 2023</font>
-                                </strong>
-                                <br>
-                                <span class="paper-links">
-                                    <a href="/project_page/hucenlife.html" target="_blank">[Home Page]</a>
-                                    <a href="https://arxiv.org/pdf/2307.14392" target="_blank">[Paper]</a>
-                                </span>
-                            </small>
-                        </div>
-                    </div>
-
-                    <div class="media publication-item" id="polar-bev">
-                        <div class="media-body">
-                            <div class="col-xs-3">
-                                <img src="imgs/paper_fig/yht.png">
-                            </div>
-
-                            <h4 class="media-heading">
-                                One Training for Multiple Deployments: Polar-based Adaptive BEV Perception for Autonomous Driving <br>
-                                <small>Huitong Yang, Xuyang Bai, Xinge Zhu, Yuexin Ma</small>
-                            </h4>
-
-                            <small class="paper-meta">
-                                <strong>
-                                    <font class="conference-tag">ICRA 2023</font>
-                                </strong>
-                                <br>
-                                <span class="paper-links">
-                                    <a href="#polar-bev">[Home Page]</a>
-                                    <a href="https://arxiv.org/abs/2304.00525" target="_blank">[Paper]</a>
-                                </span>
-                            </small>
-                        </div>
-                    </div>
-
-                    <div class="media publication-item" id="lipd">
-                        <div class="media-body">
-                            <div class="col-xs-3">
-                                <img src="imgs/paper_fig/Lip.png">
-                            </div>
-
-                            <h4 class="media-heading">
-                                LiDAR-aid Inertial Poser: Large-scale Human Motion Capture by Sparse Inertial and LiDAR Sensors <br>
-                                <small>Yiming Ren, Chengfeng Zhao, Yannan He, Peishan Cong, Han Liang, Jingyi Yu, Lan Xu, Yuexin Ma</small>
-                            </h4>
-
-                            <small class="paper-meta">
-                                <strong>
-                                    <font class="conference-tag">TVCG 2023</font>
-                                </strong>
-                                <br>
-                                <span class="paper-links">
-                                    <a href="/project_page/LIPD.html" target="_blank">[Home Page]</a>
-                                    <a href="https://arxiv.org/abs/2205.15410" target="_blank">[Paper]</a>
-                                </span>
-                            </small>
-                        </div>
-                    </div>
-
-                    <div class="media publication-item" id="cl3d">
-                        <div class="media-body">
-                            <div class="col-xs-3">
-                                <img src="imgs/paper_fig/cl3d.png">
-                            </div>
-
-                            <h4 class="media-heading">
-                                CL3D: Unsupervised Domain Adaptation for Cross-LiDAR 3D Detection <br>
-                                <small>Xidong Peng, Xinge Zhu, Yuexin Ma</small>
-                            </h4>
-
-                            <small class="paper-meta">
-                                <strong>
-                                    <font class="conference-tag">AAAI 2023</font>
-                                </strong>
-                                <br>
-                                <span class="paper-links">
-                                    <a href="https://github.com/4DVLab/CL3D.git" target="_blank">[Home Page]</a>
-                                    <a href="https://arxiv.org/abs/2212.00244" target="_blank">[Paper]</a>
-                                </span>
-                            </small>
-                        </div>
-                    </div>
-
-                    <div class="media publication-item" id="fusionpose">
-                        <div class="media-body">
-                            <div class="col-xs-3">
-                                <img src="imgs/paper_fig/fusionpose.png">
-                            </div>
-
-                            <h4 class="media-heading">
-                                Weakly Supervised 3D Multi-person Pose Estimation for Large-scale Scenes based on Monocular Camera and Single LiDAR<br>
-                                <small>Peishan Cong, Yiteng Xu, Yiming Ren, Juze Zhang, Lan Xu, Jingya Wang, Jingyi Yu, Yuexin Ma</small>
-                            </h4>
-
-                            <small class="paper-meta">
-                                <strong>
-                                    <font class="conference-tag is-award">AAAI 2023 Oral</font>
-                                </strong>
-                                <br>
-                                <span class="paper-links">
-                                    <a href="https://github.com/4DVLab/FusionPose.git" target="_blank">[Home Page]</a>
-                                    <a href="https://arxiv.org/abs/2211.16951" target="_blank">[Paper]</a>
-                                </span>
-                            </small>
-                        </div>
-                    </div>
-
                 </div>
-
-                <div class="year-group">
-                    <div class="year-divider">
-                        <span class="year-label">2022</span>
-                        <span class="year-count">3 papers</span>
-                    </div>
-                    <div class="media publication-item" id="stcrowd">
-                        <div class="media-body">
-                            <div class="col-xs-3">
-                                <img src="imgs/paper_fig/stcrowd.png">
-                            </div>
-
-                            <h4 class="media-heading">
-                                STCrowd: A Multimodal Dataset for Pedestrian Perception in Crowded Scenes <br>
-                                <small>Peishan Cong, Xinge Zhu, Feng Qiao, Yiming Ren, Xidong Peng, Yuenan Hou, Lan Xu, Ruigang Yang, Dinesh Manocha, Yuexin Ma</small>
-                            </h4>
-
-                            <small class="paper-meta">
-                                <strong>
-                                    <font class="conference-tag">CVPR 2022</font>
-                                </strong>
-                                <br>
-                                <span class="paper-links">
-                                    <a href="/STCrowd/index.html" target="_blank">[Home Page]</a>
-                                    <a href="https://arxiv.org/abs/2204.01026" target="_blank">[Paper]</a>
-                                </span>
-                            </small>
-                        </div>
-                    </div>
-
-                    <div class="media publication-item" id="trapcc">
-                        <div class="media-body">
-                            <div class="col-xs-3">
-                                <img src="imgs/paper_fig/completion.PNG">
-                            </div>
-
-                            <h4 class="media-heading">
-                                Self-supervised Point Cloud Completion on Real Traffic Scenes via Scene-concerned Bottom-up Mechanism <br>
-                                <small>Yiming Ren, Peishan Cong, Xinge Zhu, Yuexin Ma</small>
-                            </h4>
-
-                            <small class="paper-meta">
-                                <strong>
-                                    <font class="conference-tag">ICME 2022</font>
-                                </strong>
-                                <br>
-                                <span class="paper-links">
-                                    <a href="#trapcc">[Home Page]</a>
-                                    <a href="https://arxiv.org/abs/2203.10569" target="_blank">[Paper]</a>
-                                </span>
-                            </small>
-                        </div>
-                    </div>
-
-                    <div class="media publication-item" id="side">
-                        <div class="media-body">
-                            <div class="col-xs-3">
-                                <img src="imgs/paper_fig/wacv.png">
-                            </div>
-
-                            <h4 class="media-heading">
-                                SIDE: Center-based Stereo 3D Detector with Structure-awareInstance Depth Estimation <br>
-                                <small>Xidong Peng, Xinge Zhu, Tai Wang, Yuexin Ma</small>
-                            </h4>
-
-                            <small class="paper-meta">
-                                <strong>
-                                    <font class="conference-tag">WACV 2022</font>
-                                </strong>
-                                <br>
-                                <span class="paper-links">
-                                    <a href="#side">[Home Page]</a>
-                                    <a href="https://arxiv.org/abs/2108.09663" target="_blank">[Paper]</a>
-                                </span>
-                            </small>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="year-group">
-                    <div class="year-divider">
-                        <span class="year-label">2021</span>
-                        <span class="year-count">1 paper</span>
-                    </div>
-                    <div class="media publication-item" id="io-balanced">
-                        <div class="media-body">
-                            <div class="col-xs-3">
-                                <img src="imgs/paper_fig/icme2021.png">
-                            </div>
-
-                            <h4 class="media-heading">
-                                Input-Output Balanced Framework for Long-tailed LiDAR Semantic Segmentation <br>
-                                <small>Peishan Cong, Xinge Zhu, Yuexin Ma</small>
-                            </h4>
-
-                            <small class="paper-meta">
-                                <strong>
-                                    <font class="conference-tag">ICME 2021</font>
-                                </strong>
-                                <br>
-                                <span class="paper-links">
-                                    <a href="#io-balanced">[Home Page]</a>
-                                    <a href="https://arxiv.org/abs/2103.14269" target="_blank">[Paper]</a>
-                                </span>
-                            </small>
-                        </div>
-                    </div>
-                </div>
-                <hr />
-
-            </div>
-        </div>
-    </div>
-
-
-    <div class="footer"></div>
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/all.min.js"></script>
-
-    <script>
-        $(document).ready(function () {
-            $(".footer").load("/common/footer.html");
-            $(".navigation").load("/common/navigation.html");
-        });
-    </script>
-</body>
-
-</html>

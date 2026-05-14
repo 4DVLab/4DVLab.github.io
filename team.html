@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,32 +11,78 @@
     <meta name="description" content="">
     <link rel="alternate" type="application/rss+xml" href="/feed.xml">
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="/css/main.css" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/main.css" rel="stylesheet" type="text/css">
 
-    <!-- Google Fonts -->
-    <link href='https://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic' rel='stylesheet'
-        type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet"
+        type="text/css">
 
-    <!-- Favicon -->
-    <!-- <link rel="shortcut icon" href="imgs/logo.png"> -->
+    <style>
+        .team section {
+            margin-bottom: 42px;
+        }
+
+        .team header h3 {
+            letter-spacing: 0.02em;
+        }
+
+        .team hr {
+            border-color: rgba(255, 255, 255, 0.14);
+            margin-top: 8px;
+            margin-bottom: 22px;
+        }
+
+        .team h5 {
+            color: white;
+            margin-bottom: 4px;
+            font-size: 18px;
+        }
+
+        .team h4 {
+            margin-bottom: 4px;
+        }
+
+        .team .member-card {
+            width: 100%;
+            min-height: 230px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .team .member-note {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 16px;
+        }
+
+        .team .member-card small {
+            display: inline-block;
+            margin-bottom: 2px;
+            line-height: 1.45;
+        }
+
+        .team .photo {
+            width: 132px;
+            height: 132px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+    </style>
 </head>
 
 <body data-spy="scroll" data-offset="80" data-target=".scrollspy" id="top" style="background-color: #000000;">
     <div class="navigation"></div>
 
-    <!-- Start Banner -->
     <div id="hero-carousel" class="hero" style="background-color: #000000;">
-
         <div class="item"
             style="background: url('imgs/activity.jpg') no-repeat; background-position: center; background-size: contain;">
-
             <a href="" target="_blank">
                 <div class="hero-content">
                     <div class="container-fluid">
                         <div class="hero-content-inner">
-                            <h1>Team Member</h1>
+                            <h1>Team Members</h1>
                         </div>
                     </div>
                 </div>
@@ -44,42 +90,35 @@
         </div>
 
         <div class="item"
-        style="background: url('imgs/iccv2023.jpg') no-repeat; background-position: center; background-size: contain;">
-
-        <a href="" target="_blank">
-            <div class="hero-content">
-                <div class="container-fluid">
-                    <div class="hero-content-inner">
-                        <h1>ICCV 2023</h1>
+            style="background: url('imgs/iccv2023.jpg') no-repeat; background-position: center; background-size: contain;">
+            <a href="" target="_blank">
+                <div class="hero-content">
+                    <div class="container-fluid">
+                        <div class="hero-content-inner">
+                            <h1>ICCV 2023</h1>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </a>
+            </a>
+        </div>
     </div>
-    </div>
-    <!-- End Banner -->
 
     <div class="team top-container">
         <div class="container-fluid">
             <div class="post">
-                <!-- Faculty -->
                 <section>
                     <header>
-                        <h3><font color="white"> Professor </font></h3>
+                        <h3><font color="white">Professor</font></h3>
                     </header>
                     <hr />
                     <div class="row">
                         <div class="col-sm-4 col-md-4">
-                            <div style="width: 100%;">
-                                <a href="https://yuexinma.me/">
+                            <div class="member-card">
+                                <a href="https://yuexinma.me/" target="_blank">
                                     <img class="photo" src="imgs/group_img/self.jpg">
                                 </a>
-                                <h4>
-                                    <a href="https://yuexinma.me/">
-                                        Yuexin Ma(马月昕)
-                                    </a>
-                                </h4>
-                                <small><font color="white">Assistant Professor</font></small>
+                                <h4><a href="https://yuexinma.me/" target="_blank">Yuexin Ma <span class="name-zh">(马月昕)</span></a></h4>
+                                <small><font color="white">Associate Professor</font></small>
                                 <br>
                                 <small><font color="white">ShanghaiTech University</font></small>
                             </div>
@@ -87,7 +126,6 @@
                     </div>
                 </section>
 
-                <!-- PhD Students -->
                 <section>
                     <header>
                         <h3><font color="white">PhD Students</font></h3>
@@ -95,12 +133,10 @@
                     <hr />
                     <div class="row">
                         <div class="col-sm-4 col-md-4">
-                            <div style="width: 100%">
+                            <div class="member-card">
                                 <img class="photo" src="imgs/group_img/cps.jpg">
-								<br>
-                                <h5><font color="white">
-                                    Peishan Cong(丛培珊)</font>
-								</h5>
+                                <br>
+                                <h5>Peishan Cong</h5>
                                 <small><font color="white">2021 Class</font></small>
                                 <br>
                                 <small><font color="white">ShanghaiTech University</font></small>
@@ -108,14 +144,88 @@
                         </div>
 
                         <div class="col-sm-4 col-md-4">
-                            <div style="width: 100%">
-                                    <img class="photo" src="imgs/group_img/jywq.jpg">
-								<br>
-                                <h5><font color="white">
-                                    <!-- <a href="https://sist.shanghaitech.edu.cn/sist_en/2020/0914/c7582a55629/page.htm"> -->
-                                    Yingwenqi Jiang(蒋颖文琪)</font>
-                                </h5>
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/jywq.jpg">
+                                <br>
+                                <h5>Yingwenqi Jiang</h5>
                                 <small><font color="white">2021 Class</font></small>
+                                <br>
+                                <small><font color="white">ShanghaiTech University</font></small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/rym.JPG">
+                                <br>
+                                <h5>Yiming Ren</h5>
+                                <small><font color="white">2022 Class</font></small>
+                                <br>
+                                <small><font color="white">ShanghaiTech University</font></small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/xyt.jpg">
+                                <br>
+                                <h5>Yiteng Xu</h5>
+                                <small><font color="white">2023 Class</font></small>
+                                <br>
+                                <small><font color="white">ShanghaiTech University</font></small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/wyz.jpg">
+                                <br>
+                                <h5>Youzhuo Wang</h5>
+                                <small><font color="white">2023 Class</font></small>
+                                <br>
+                                <small><font color="white">ShanghaiTech University</font></small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/avatar-placeholder.png">
+                                <br>
+                                <h5>Zemin Yang</h5>
+                                <small><font color="white">2024 Class</font></small>
+                                <br>
+                                <small><font color="white">ShanghaiTech University</font></small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/avatar-placeholder.png">
+                                <br>
+                                <h5>Jiamin Wang</h5>
+                                <small><font color="white">2024 Class</font></small>
+                                <br>
+                                <small><font color="white">ShanghaiTech University</font></small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/avatar-placeholder.png">
+                                <br>
+                                <h5>Yaoyu He</h5>
+                                <small><font color="white">2026 Class</font></small>
+                                <br>
+                                <small><font color="white">ShanghaiTech University</font></small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/avatar-placeholder.png">
+                                <br>
+                                <h5>Zhenxuan Wu</h5>
+                                <small><font color="white">2026 Class</font></small>
                                 <br>
                                 <small><font color="white">ShanghaiTech University</font></small>
                             </div>
@@ -123,193 +233,439 @@
                     </div>
                 </section>
 
-
-                <!-- Master Students -->
                 <section>
                     <header>
                         <h3><font color="white">Master Students</font></h3>
                     </header>
                     <hr />
                     <div class="row">
-						<div class="col-sm-4 col-md-4">
-                            <div style="width: 100%">
-                                <img class="photo" src="imgs/group_img/pxd.jpg">
-								<br>
-                                <h5>
-                                    Xidong Peng(彭玺东)
-								</h5>
-                                <small>2021 Class</small>
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/yyc.jpg">
                                 <br>
-                                <small>ShanghaiTech University </small>
-                            </div>
-                        </div>
-
-						<div class="col-sm-4 col-md-4">
-                            <div style="width: 100%;">
-                                <!-- <a href="https://sist.shanghaitech.edu.cn/sist_en/2020/0914/c7582a55629/page.htm"> -->
-                                    <img class="photo" src="imgs/group_img/swc.jpg">
-                                <!-- </a> -->
-								<br>
-                                <h5>
-                                    <!-- <a href="https://sist.shanghaitech.edu.cn/sist_en/2020/0914/c7582a55629/page.htm"> -->
-                                        Wenchao Shi(石文超)
-                                </h5>
-                                <small>2021 Class</small>
+                                <h5>Yichen Yao</h5>
+                                <small><font color="white">2023 Class</font></small>
                                 <br>
-                                <small>ShanghaiTech University </small>
+                                <small><font color="white">ShanghaiTech University</font></small>
                             </div>
                         </div>
 
                         <div class="col-sm-4 col-md-4">
-                            <div style="width: 100%">
-                                <img class="photo" src="imgs/group_img/rym.JPG">
-								<br>
-                                <h5>
-                                    Yiming Ren(任奕名)
-								</h5>
-                                <small>2022 Class</small>
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/tjd.jpg">
                                 <br>
-                                <small>ShanghaiTech University </small>
+                                <h5>Jiadong Tu</h5>
+                                <small><font color="white">2023 Class</font></small>
+                                <br>
+                                <small><font color="white">ShanghaiTech University</font></small>
                             </div>
                         </div>
 
                         <div class="col-sm-4 col-md-4">
-                            <div style="width: 100%">
-                                    <img class="photo" src="imgs/group_img/hx.jpg">
-								<br>
-                                <h5>
-                                    <!-- <a href="https://sist.shanghaitech.edu.cn/sist_en/2020/0914/c7582a55629/page.htm"> -->
-                                        Xiao Han(韩笑)
-                                </h5>
-                                <small>2022 Class</small>
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/th.jpg">
                                 <br>
-                                <small>ShanghaiTech University </small>
-                            </div>
-                        </div>
-					<!-- </div>
-					<br>
-					<div class="row"> -->
-						<div class="col-sm-4 col-md-4">
-                            <div style="width: 100%;">
-                                <!-- <a href="https://sist.shanghaitech.edu.cn/sist_en/2020/0914/c7582a55629/page.htm"> -->
-                                    <img class="photo" src="imgs/group_img/jq.png">
-                                <!-- </a> -->
-								<br>
-                                <h5>
-                                    <!-- <a href="https://sist.shanghaitech.edu.cn/sist_en/2020/0914/c7582a55629/page.htm"> -->
-                                        Qi Jiang(姜奇)
-                                </h5>
-                                <small>2022 Class</small>
+                                <h5>Heng Tao</h5>
+                                <small><font color="white">2023 Class</font></small>
                                 <br>
-                                <small>ShanghaiTech University </small>
+                                <small><font color="white">ShanghaiTech University</font></small>
                             </div>
                         </div>
 
-						<div class="col-sm-4 col-md-4">
-                            <div style="width: 100%;">
-                                <!-- <a href="https://sist.shanghaitech.edu.cn/sist_en/2020/0914/c7582a55629/page.htm"> -->
-                                    <img class="photo" src="imgs/group_img/yyc.jpg">
-                                <!-- </a> -->
-								<br>
-                                <h5>
-                                    <!-- <a href="https://sist.shanghaitech.edu.cn/sist_en/2020/0914/c7582a55629/page.htm"> -->
-                                        Yichen Yao(姚奕忱)
-                                </h5>
-                                <small>2023 Class</small>
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/avatar-placeholder.png">
                                 <br>
-                                <small>ShanghaiTech University </small>
-                            </div>
-                        </div>
-	
-						<div class="col-sm-4 col-md-4">
-                            <div style="width: 100%;">
-                                <!-- <a href="https://sist.shanghaitech.edu.cn/sist_en/2020/0914/c7582a55629/page.htm"> -->
-                                    <img class="photo" src="imgs/group_img/xyt.jpg">
-                                <!-- </a> -->
-								<br>
-                                <h5>
-                                    <!-- <a href="https://sist.shanghaitech.edu.cn/sist_en/2020/0914/c7582a55629/page.htm"> -->
-                                        Yiteng Xu(许艺腾)
-                                </h5>
-                                <small>2023 Class</small>
+                                <h5>Yiming Zhong</h5>
+                                <small><font color="white">2024 Class</font></small>
                                 <br>
-                                <small>ShanghaiTech University </small>
+                                <small><font color="white">ShanghaiTech University</font></small>
                             </div>
                         </div>
 
-						<div class="col-sm-4 col-md-4">
-                            <div style="width: 100%;">
-                                <!-- <a href="https://sist.shanghaitech.edu.cn/sist_en/2020/0914/c7582a55629/page.htm"> -->
-                                    <img class="photo" src="imgs/group_img/tjd.jpg">
-                                <!-- </a> -->
-								<br>
-                                <h5>
-                                    <!-- <a href="https://sist.shanghaitech.edu.cn/sist_en/2020/0914/c7582a55629/page.htm"> -->
-                                        Jiadong Tu(屠珈东)
-                                </h5>
-                                <small>2023 Class</small>
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/avatar-placeholder.png">
                                 <br>
-                                <small>ShanghaiTech University </small>
-                            </div>
-                        </div>
-					<!-- </div>
-					<br>
-					<div class="row"> -->
-						<div class="col-sm-4 col-md-4">
-                            <div style="width: 100%;">
-                                <!-- <a href="https://sist.shanghaitech.edu.cn/sist_en/2020/0914/c7582a55629/page.htm"> -->
-                                    <img class="photo" src="imgs/group_img/th.jpg">
-                                <!-- </a> -->
-								<br>
-                                <h5>
-                                    <!-- <a href="https://sist.shanghaitech.edu.cn/sist_en/2020/0914/c7582a55629/page.htm"> -->
-                                        Heng Tao(陶珩)
-                                </h5>
-                                <small>2023 Class</small>
+                                <h5>Jiayi Ye</h5>
+                                <small><font color="white">2024 Class</font></small>
                                 <br>
-                                <small>ShanghaiTech University </small>
+                                <small><font color="white">ShanghaiTech University</font></small>
                             </div>
                         </div>
 
-						<div class="col-sm-4 col-md-4">
-                            <div style="width: 100%;">
-                                <!-- <a href="https://sist.shanghaitech.edu.cn/sist_en/2020/0914/c7582a55629/page.htm"> -->
-                                    <img class="photo" src="imgs/group_img/wyz.jpg">
-                                <!-- </a> -->
-								<br>
-                                <h5>
-                                    <!-- <a href="https://sist.shanghaitech.edu.cn/sist_en/2020/0914/c7582a55629/page.htm"> -->
-                                        <font color="white">Youzhuo Wang(王尤卓)</font>
-                                </h5>
-                                <small>2023 Class</small>
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/avatar-placeholder.png">
                                 <br>
-                                <small>ShanghaiTech University </small>
+                                <h5>Aoru Xue</h5>
+                                <small><font color="white">2024 Class</font></small>
+                                <br>
+                                <small><font color="white">ShanghaiTech University</font></small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/avatar-placeholder.png">
+                                <br>
+                                <h5>Qi Xia</h5>
+                                <small><font color="white">2025 Class</font></small>
+                                <br>
+                                <small><font color="white">ShanghaiTech University</font></small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/avatar-placeholder.png">
+                                <br>
+                                <h5>Yaoqin Ye</h5>
+                                <small><font color="white">2025 Class</font></small>
+                                <br>
+                                <small><font color="white">ShanghaiTech University</font></small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/avatar-placeholder.png">
+                                <br>
+                                <h5>Yufei Zhu</h5>
+                                <small><font color="white">2025 Class</font></small>
+                                <br>
+                                <small><font color="white">ShanghaiTech University</font></small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/avatar-placeholder.png">
+                                <br>
+                                <h5>Xiang Feng</h5>
+                                <small><font color="white">2025 Class</font></small>
+                                <br>
+                                <small><font color="white">ShanghaiTech University</font></small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/avatar-placeholder.png">
+                                <br>
+                                <h5>Ziyi Wang</h5>
+                                <small><font color="white">2025 Class</font></small>
+                                <br>
+                                <small><font color="white">ShanghaiTech University</font></small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/avatar-placeholder.png">
+                                <br>
+                                <h5>Mengyang Li</h5>
+                                <small><font color="white">2025 Class</font></small>
+                                <br>
+                                <small><font color="white">ShanghaiTech University</font></small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/avatar-placeholder.png">
+                                <br>
+                                <h5>Yichuan Yu</h5>
+                                <small><font color="white">2025 Class</font></small>
+                                <br>
+                                <small><font color="white">ShanghaiTech University</font></small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/avatar-placeholder.png">
+                                <br>
+                                <h5>Yifan Huang</h5>
+                                <small><font color="white">2026 Class</font></small>
+                                <br>
+                                <small><font color="white">ShanghaiTech University</font></small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/avatar-placeholder.png">
+                                <br>
+                                <h5>Pengfei Tian</h5>
+                                <small><font color="white">2026 Class</font></small>
+                                <br>
+                                <small><font color="white">ShanghaiTech University</font></small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/avatar-placeholder.png">
+                                <br>
+                                <h5>Zhihao Tang</h5>
+                                <small><font color="white">2026 Class</font></small>
+                                <br>
+                                <small><font color="white">ShanghaiTech University</font></small>
                             </div>
                         </div>
                     </div>
+                </section>
 
+                <section>
+                    <header>
+                        <h3><font color="white">Undergraduate Students</font></h3>
+                    </header>
+                    <hr />
+                    <div class="row">
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/avatar-placeholder.png">
+                                <br>
+                                <h5>Bolin Qin</h5>
+                                <small><font color="white">2024 Class</font></small>
+                                <br>
+                                <small><font color="white">ShanghaiTech University</font></small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/avatar-placeholder.png">
+                                <br>
+                                <h5>Zimo Ding</h5>
+                                <small><font color="white">2024 Class</font></small>
+                                <br>
+                                <small><font color="white">ShanghaiTech University</font></small>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <section>
                     <header>
                         <h3><font color="white">Research Assistants</font></h3>
                     </header>
-                    <hr \>
+                    <hr />
                     <div class="row">
-						<div class="col-sm-4 col-md-4">
-                            <div style="width: 100%">
-                                    <img class="photo" src="imgs/group_img/lyh.jpg">
-								<br>
-                                <h5>
-                                    <!-- <a href="https://sist.shanghaitech.edu.cn/sist_en/2020/0914/c7582a55629/page.htm"> -->
-                                    <font color="white">Yuhang Lu(陆宇航)</font>
-                                </h5>
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/avatar-placeholder.png">
+                                <br>
+                                <h5>Yidong Huang</h5>
+                                <small><font color="white">Research Assistant, 2026-</font></small>
+                                <br>
+                                <small><font color="white">Nanjing University</font></small>
                             </div>
                         </div>
                     </div>
                 </section>
 
+                <section>
+                    <header>
+                        <h3><font color="white">Visiting Students</font></h3>
+                    </header>
+                    <hr />
+                    <div class="row">
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/avatar-placeholder.png">
+                                <br>
+                                <h5>Shengxiao Gong</h5>
+                                <small><font color="white">Visiting Master Student, 2026-</font></small>
+                                <br>
+                                <small><font color="white">Queen Mary University of London</font></small>
+                            </div>
+                        </div>
 
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/avatar-placeholder.png">
+                                <br>
+                                <h5>Xin Liu</h5>
+                                <small><font color="white">Visiting Undergraduate Student, 2026-</font></small>
+                                <br>
+                                <small><font color="white">Tianjin University</font></small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/avatar-placeholder.png">
+                                <br>
+                                <h5>Zhenquan Zhang</h5>
+                                <small><font color="white">Visiting Master Student, 2026-</font></small>
+                                <br>
+                                <small><font color="white">South China University of Technology</font></small>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <header>
+                        <h3><font color="white">Alumni</font></h3>
+                    </header>
+                    <hr />
+                    <div class="row">
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/pxd.jpg">
+                                <br>
+                                <h5>Xidong Peng</h5>
+                                <small><font color="white">Master Alumni, 2021-2024</font></small>
+                                <br>
+                                <small><font color="white">ShanghaiTech University</font></small>
+                                <br>
+                                <small><font color="white">Next stop: Huawei Algorithm</font></small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/avatar-placeholder.png">
+                                <br>
+                                <h5>Shaoyang Wang</h5>
+                                <small><font color="white">Visiting Undergraduate Alumni, 2024-2025</font></small>
+                                <br>
+                                <small><font color="white">Tsinghua University</font></small>
+                                <br>
+                                <small><font color="white">Next stop: National University of Singapore (NUS)</font></small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/hx.jpg">
+                                <br>
+                                <h5>Xiao Han</h5>
+                                <small><font color="white">Master Alumni, 2022-2025</font></small>
+                                <br>
+                                <small><font color="white">ShanghaiTech University</font></small>
+                                <br>
+                                <small><font color="white">Next stop: Xiaomi EV Algorithm</font></small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/jq.png">
+                                <br>
+                                <h5>Qi Jiang</h5>
+                                <small><font color="white">Master Alumni, 2022-2025</font></small>
+                                <br>
+                                <small><font color="white">ShanghaiTech University</font></small>
+                                <br>
+                                <small><font color="white">Next stop: VIVO Imaging Algorithm</font></small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/lyh.jpg">
+                                <br>
+                                <h5>Yuhang Lu</h5>
+                                <small><font color="white">Research Assistant Alumni, 2022-2024</font></small>
+                                <br>
+                                <small><font color="white">Beijing University of Posts and Telecommunications</font></small>
+                                <br>
+                                <small><font color="white">Next stop: The University of Hong Kong (HKU) MMLab</font></small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/avatar-placeholder.png">
+                                <br>
+                                <h5>Yumeng Liu</h5>
+                                <small><font color="white">Visiting PhD Alumni, 2023-2025</font></small>
+                                <br>
+                                <small><font color="white">The University of Hong Kong (HKU)</font></small>
+                                <br>
+                                <small><font color="white">Next stop: University of Science and Technology of China</font></small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/avatar-placeholder.png">
+                                <br>
+                                <h5>Chuyang Xiao</h5>
+                                <small><font color="white">Undergraduate Alumni, 2024-2025</font></small>
+                                <br>
+                                <small><font color="white">ShanghaiTech University</font></small>
+                                <br>
+                                <small><font color="white">Next stop: Carnegie Mellon University (CMU)</font></small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/avatar-placeholder.png">
+                                <br>
+                                <h5>Lvyuan Ge</h5>
+                                <small><font color="white">Visiting Undergraduate Alumni, 2025-2025</font></small>
+                                <br>
+                                <small><font color="white">University of Toronto</font></small>
+                                <br>
+                                <small><font color="white">Next stop: University of Toronto</font></small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/avatar-placeholder.png">
+                                <br>
+                                <h5>Caiyi Sun</h5>
+                                <small><font color="white">Visiting Undergraduate Alumni, 2024-2025</font></small>
+                                <br>
+                                <small><font color="white">Beijing Institute of Technology</font></small>
+                                <br>
+                                <small><font color="white">Next stop: The University of Hong Kong (HKU)</font></small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/avatar-placeholder.png">
+                                <br>
+                                <h5>Zimo Jiang</h5>
+                                <small><font color="white">Visiting Master Alumni, 2023-2024</font></small>
+                                <br>
+                                <small><font color="white">ShanghaiTech University</font></small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/avatar-placeholder.png">
+                                <br>
+                                <h5>Zining Song</h5>
+                                <small><font color="white">Undergraduate Alumni, 2024-2025</font></small>
+                                <br>
+                                <small><font color="white">ShanghaiTech University</font></small>
+                                <br>
+                                <small><font color="white">Next stop: ShanghaiTech University</font></small>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4 col-md-4">
+                            <div class="member-card">
+                                <img class="photo" src="imgs/group_img/swc.jpg">
+                                <br>
+                                <h5>Wenchao Shi</h5>
+                                <small><font color="white">Master Alumni, 2021-2024</font></small>
+                                <br>
+                                <small><font color="white">ShanghaiTech University</font></small>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
     </div>
