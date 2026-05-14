@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="Fusing point cloud and image features to better align visual features with semantic features.">
+  <meta name="keywords" content="zero-shot point cloud segmentation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LiDAR-aid Inertial Poser: Large-scale Human Motion Capture by Sparse Inertial and LiDAR Sensors</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <!-- Menu bar, can switch to other work or homepage -->
+
+  <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav> -->
+
+
+  <!-- Title, author and some icon(paper, code, video, etc...) -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">LiDAR-aid Inertial Poser: Large-scale Human Motion Capture by Sparse Inertial and LiDAR Sensors</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                
+                <a href="https://scholar.google.com/citations?user=6QfC8kEAAAAJ&hl=zh-CN">Yiming Ren</a><sup>*</sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=PKYWxA0AAAAJ&hl=zh-CN&oi=sra">Chenfeng Zhao</a><sup>*</sup>,</span>
+              <span class="author-block">
+                Yannan He</a><sup></sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=KAjruhYAAAAJ&hl=zh-CN&oi=sra">Peishan Cong</a><sup></sup>,</span>
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=V8dsEp8AAAAJ&hl=zh-CN&oi=sra">Han Liang</a><sup></sup>,</span>
+              <span class="author-block">
+                <a href="http://www.yu-jingyi.com">Jingyi Yu</a><sup></sup>,
+              </span>
+              <span class="author-block">
+                <a href="http://xu-lan.com/">Lan Xu</a><sup>&#8224</sup>,
+              </span>
+              <span class="author-block">
+                <a href="http://yuexinma.me">Yuexin Ma</a><sup>&#8224</sup>,
+              </span>
+              </p>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup></sup>ShanghaiTech University,</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2205.15410.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2205.15410" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=ao9eTGPQT6k"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/4DVLab/LIP"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a href="https://drive.google.com/file/d/1SVO77FWFUOtC-Et2sdlgAdiNQWzgzxt0/view?usp=sharing"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- teaser part -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/teaser.pdf"
+                type="video/mp4">
+      </video> -->
+        <img src="./static/LIPD_pic/teaser.png" style="display: block; margin: 0 auto; ">
+        <b>Figure 1. We propose a multi-modal motion capture approach, LIP, that estimates challenging human motions with accurate local pose and global translation in large-scale scenarios using single LiDAR and four inertial measurement units.
+          </h2>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              We propose a multi-sensor fusion method for capturing challenging 3D human motions with accurate consecutive local poses and global trajectories in large-scale scenarios, only using single LiDAR and 4 IMUs, which are set up conveniently and worn lightly. Specifically, to fully utilize the global geometry information captured by LiDAR and local dynamic motions captured by IMUs, we design a two-stage pose estimator in a coarse-to-fine manner, where point clouds provide the coarse body shape and IMU measurements optimize the local actions. Furthermore, considering the translation deviation caused by the view-dependent partial point cloud, we propose a pose-guided translation corrector. It predicts the offset between captured points and the real root locations, which makes the consecutive movements and trajectories more precise and natural. Moreover, we collect a LiDAR-IMU multi-modal mocap dataset, LIPD, with diverse human actions in long-range scenarios. Extensive quantitative and qualitative experiments on LIPD and other open datasets all demonstrate the capability of our approach for compelling motion capture in large-scale scenarios, which outperforms other methods by an obvious margin. We will release our code and captured dataset to stimulate future research.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Method. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <h2 class="title is-3">Method</h2>
+          <!-- <div class="container_imgleft"> -->
+            
+          <img src="./static/LIPD_pic/pipeline.png">
+          
+          <!-- <img src="./static/pics/seg_vis.png" style="display: block; margin: 0 auto; "> -->
+          <div class="content has-text-justified">
+
+            <p>
+              <b>Overview of our pipeline. It consists of two cooperative modules: `Multi-modal Pose Estimation` (Module-I) and `Pose-guided Translation Correction` (Module-II) to estimate skeletal pose and global translation from sparse IMU and LiDAR inputs.
+            </p>
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+      <!--/ Method. -->
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Method. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <h2 class="title is-3">Dataset</h2>
+          <!-- <div class="container_imgleft"> -->
+            
+          <img src="./static/LIPD_pic/dataset2.png">
+          
+          <!-- <img src="./static/pics/seg_vis.png" style="display: block; margin: 0 auto; "> -->
+          <div class="content has-text-justified">
+
+            <p>
+              <b>LIPD dataset contains diverse human poses from daily actions to professional sports actions. We demonstrate the point cloud and corresponding ground-truth mesh for several action samples. Such complex poses, like crouching or having the back to LiDAR in the second row, bring challenges for accurate mocap due to severe self-occlusions. We also have multi-person scenarios with external occlusions, as the last basketball case shows, where the player's body is partially covered by others in the LiDAR's view.
+            </p>
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+      <!--/ Method. -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Method. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Dataset Struture.</h2>
+
+<h3 id="title is-3" style="text-align:left;font-size: larger" ><b>Dataset file structure</b></h3>
+<pre style="display: block; border: 1px solid #ccc; border-radius: 4px; text-align:left">
+LIPD
+|── PC_Data (LiDAR)
+|   |── realdata (LIPD record data)
+|   |   |── 921 (record date)
+|   |   |   |── seq1 (sequence)
+|   |   |   |   |── 0.bin
+|   |   |   |   |── 1.bin
+|   |   |   |   |── ...
+|   |── test (synthetic test data)
+|   |   |── DIP
+|   |   |   |── s_01
+|   |   |   |   |── 01
+|   |   |   |   |   |── 0.bin
+|   |   |   |   |   |── 1.bin
+|   |   |   |   |   |── ...
+|   |── train (synthetic test data)
+|   |   |── CMU
+|   |   |   |── 01
+|   |   |   |   |── 01_01_stageii
+|   |   |   |   |   |── 0.bin
+|   |   |   |   |   |── 1.bin
+|   |   |   |   |   |── ...
+|── LIPD_train.pkl (Preprocessed data in pkl)
+|   |── info (Dict that stores one frame of information)
+|   |   |── pc (point cloud path)
+|   |   |── gt_r (ground-truth of global rotation in 6D)
+|   |   |── gt_joint (ground-truth of 3D human joint positions)
+|   |   |── imu_ori (IMU rotation data)
+|   |   |── imu_acc (IMU accelerate data)
+|   |   |── gt (ground-truth of SMPL pose parameters)
+|   |   |── seq_path (sequence path to which the frame belongs)
+|── LIPD_test.pkl
+|── CMU.pkl
+|── TC_test.pkl
+|── ...
+</pre>
+
+<h4 id="specification" style="text-align:left"><b>Specification</b></h4>
+<ol style="text-align:left ;margin-left:40px">
+  <li>Point clouds are stored in binary format (bin). Use <code>np.fromfile(file_path, dtype=np.float32).reshape(-1, 3)</code> to load the file. Columns 0-3 represent x, y, z respectively.</li>
+  <li>The IMU data and ground-truth data are stored in file.pkl, and the IMU order is leftForeArm, rightForeArm,leftLeg, rightLeg, head, root. When you use the file.pkl, you may need to modify the seq_path to your download data path.</li>
+  <li>The all data is 10 fps.</li>
+</ol>
+<br>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Method. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3"> Quantitative comparisons</h2>
+          <img src="./static/LIPD_pic/comparison.png">
+          <div class="content has-text-justified">
+          </div>
+        </div>
+      </div>
+      <!--/ Method. -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Method. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3"> The gallery of our results</h2>
+          <img src="./static/LIPD_pic/gallery.png" style="display: block; margin: 0 auto; ">
+          <div class="content has-text-justified">
+            <p>
+          
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Method. -->
+    </div>
+  </section>
+
+
+  <!-- show bibtex -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@ARTICLE{10049734,
+        author={Ren, Yiming and Zhao, Chengfeng and He, Yannan and Cong, Peishan and Liang, Han and Yu, Jingyi and Xu, Lan and Ma, Yuexin},
+        journal={IEEE Transactions on Visualization and Computer Graphics}, 
+        title={LiDAR-aid Inertial Poser: Large-scale Human Motion Capture by Sparse Inertial and LiDAR Sensors}, 
+        year={2023},
+        volume={29},
+        number={5},
+        pages={2337-2347},
+        doi={10.1109/TVCG.2023.3247088}}
+</code></pre>
+    </div>
+  </section>
+
+
+  <!-- show license -->
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <!-- <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a> -->
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              Website source code based on the <a href="https://nerfies.github.io">Nerfies</a> project page.
+              If you want to reuse their <a href="https://github.com/nerfies/nerfies.github.io">source code</a> , please
+              credit them appropriately.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

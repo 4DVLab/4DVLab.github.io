@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+    content="Fusing point cloud and image features to better align visual features with semantic features.">
+  <meta name="keywords" content="zero-shot point cloud segmentation">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WildRefer</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th, td {
+      padding: 5px;
+      text-align: center;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- Menu bar, can switch to other work or homepage -->
+
+  <!-- <nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav> -->
+
+
+  <!-- Title, author and some icon(paper, code, video, etc...) -->
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">WildRefer: 3D Object Localization in Large-scale Dynamic Scenes with Multi-modal Visual Data and Natural Language</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                
+                <a href="https://zhenxianglin.github.io">Zhenxiang Lin</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                Xidong Peng<sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://coralemon.github.io/">Peishan Cong</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                Ge Zheng<sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://yujingsun.github.io/">Yujin Sun</a><sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://cardwing.github.io/">Yuenan Hou</a><sup>3</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://xingezhu.me/aboutme.html">Xinge Zhu</a><sup>4</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://faculty.sist.shanghaitech.edu.cn/yangsibei/">Sibei Yang</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="http://yuexinma.me">Yuexin Ma</a><sup></sup><sup>1</sup>,
+              </span>
+              </p>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>ShanghaiTech University,</span>
+                <span class="author-block"><sup>2</sup>The University of Hong Kong</span>
+              </p>
+              <span class="author-block"><sup>3</sup>Shanghai AI Laboratory</span>
+              <span class="author-block"><sup>4</sup>The Chinese University of Hong Kong</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <!-- <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2205.15410.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+
+                <span class="link-block">
+                  <a href="https://arxiv.org/pdf/2205.15410" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span> -->
+                
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/4DVLab/WildRefer"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+                <!-- Dataset Link. -->
+                <span class="link-block">
+                  <a href="https://drive.google.com/drive/folders/1UTyHTC3ixU9ATKxdJxK-ob6SGqUpA_r1"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="far fa-images"></i>
+                    </span>
+                    <span>Dataset</span>
+                  </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- teaser part -->
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/teaser.pdf"
+                type="video/mp4">
+      </video> -->
+        <img src="./static/wildrefer_pics/teaser.png" style="display: block; margin: 0 auto; ">
+        <b>Introduction to the 3DVGW task and related application. The assistive robot observes the dynamic scene and locates the 3D object in the physical world according to natural language descriptions. Then, the robot moves to the target object to provide service. WildRefer provides a LiDAR-camera multi-sensor-based solution, which can conduct 3D visual grounding in large-scale unconstrained environment.
+          </h2>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              We introduce the task of 3D visual grounding in large-scale dynamic scenes based on natural linguistic descriptions and online captured multi-modal visual data, including 2D images and 3D LiDAR point clouds. We present a novel method, dubbed WildRefer, for this task by fully utilizing the rich appearance information in images, the position and geometric clues in point cloud as well as the semantic knowledge of language descriptions. Besides, we propose two novel datasets, i.e., STRefer and LifeRefer, which focus on large-scale human-centric daily-life scenarios accompanied with abundant 3D object and natural language annotations. Our datasets are significant for the research of 3D visual grounding in the wild and has huge potential to boost the development of autonomous driving and service robots. Extensive experiments and ablation studies demonstrate that our method achieves state-of-the-art performance on the proposed benchmarks.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Method. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <h2 class="title is-3">Method</h2>
+          <!-- <div class="container_imgleft"> -->
+            
+          <img src="./static/wildrefer_pics/pipeline.png">
+          
+          <!-- <img src="./static/pics/seg_vis.png" style="display: block; margin: 0 auto; "> -->
+          <div class="content has-text-justified">
+
+            <p>
+              <b>Pipeline of WildRefer. The inputs are multi-frame synchronized points clouds and images as well as a natural language description. After feature extraction, we obtain two types of visual feature and a text feature. Through two dynamic visual encoders, we extract dynamic-enhanced image and point features. Then, a triple-modal feature interaction module is followed to fuse valuable information from different modalities. Finally, through a DETR-like decoder, we decode the location and size of the target object. SA and CA denote self-attention and cross-attention, respectively.
+            </p>
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+      <!--/ Method. -->
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Method. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          
+          <h2 class="title is-3">Dataset</h2>
+          <!-- <div class="container_imgleft"> -->
+            
+          <img src="./static/wildrefer_pics/strefer.png">          
+          <div class="content has-text-justified">
+            <p style="text-align: center;"><b>STRefer</b></p>
+          </div>
+          <img src="./static/wildrefer_pics/liferefer.png">          
+          <div class="content has-text-justified">
+            <p style="text-align: center;"><b>LifeRefer</p>
+          </div>
+          
+          <!-- </div> -->
+        </div>
+      </div>
+      <!--/ Method. -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Method. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Dataset Struture.</h2>
+
+<h3 id="title is-3" style="text-align:left;font-size: larger" ><b>Dataset file structure</b></h3>
+<pre style="display: block; border: 1px solid #ccc; border-radius: 4px; text-align:left">
+STRefer & LifeRefer
+|── group_id # strefer or liferefer
+|── scene_id # unique scene id that can match STCrowd & HucenLife
+|── object_id # unique object id (For LifeRefer, it is kept same with HucenLife. 
+|               For STRefer, it consist of scene id, frame id and object id.)
+|── point_cloud
+|   |── point_cloud_name # the frame name of point cloud for the scene
+|   |── bbox             # bounding box of the object
+|   |── category         # category of the object
+|── language
+|   |── description      # language description of the object
+|   |── token            # token of the description
+|   |── ann_id           # annotation id of the object
+|── image
+|   |── image_name       # the frame name of image for the scene 
+|── calibration 
+|   |── ex_matrix        # external matrix of calibration
+|   |── in_matrix        # internal matrix of calibration
+</pre>
+
+<h4 id="specification" style="text-align:left"><b>Specification</b></h4>
+<ol style="text-align:left ;margin-left:40px">
+  <p>We strongly recommend use our <a href="https://drive.google.com/drive/folders/1g5OgIT3svL6TPXcusPPsigsnP_Yi1JT7?usp=drive_link">preproceed data</a> of STCrowd and HucenLife.</p>
+</ol>
+<br>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Method. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3"> Quantitative comparisons</h2>
+          <!-- <img src="./static/LIPD_pic/comparison.png"> -->
+          <ol style="text-align:left ;margin-left:40px">
+            <p style="margin-left: -130px;">Comparison results on STRefer and LifeRefer. {*} denotes the one-stage version without pretrained 3D decoder.</p>
+          </ol>
+          <table style="margin-left: -100px;">
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>Publication</th>
+                <th>Type</th>
+                <th>STRefer<br>Acc@0.25</th>
+                <th>STRefer<br>Acc@0.5</th>
+                <th>STRefer<br>mIOU</th>
+                <th>LifeRefer<br>Acc@0.25</th>
+                <th>LifeRefer<br>Acc@0.5</th>
+                <th>LifeRefer<br>mIOU</th>
+                <th>Time cost<br>(ms)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>ScanRefer</td>
+                <td>ECCV-2020</td>
+                <td>Two-Stage</td>
+                <td>32.93</td>
+                <td>30.39</td>
+                <td>25.21</td>
+                <td>22.76</td>
+                <td>14.89</td>
+                <td>12.61</td>
+                <td>156</td>
+              </tr>
+              <tr>
+                <td>ReferIt3D</td>
+                <td>ECCV-2020</td>
+                <td>Two-Stage</td>
+                <td>34.05</td>
+                <td>31.61</td>
+                <td>26.05</td>
+                <td>26.18</td>
+                <td>17.06</td>
+                <td>14.38</td>
+                <td>194</td>
+              </tr>
+              <tr>
+                <td>3DVG-Transformer</td>
+                <td>ICCV-2021</td>
+                <td>Two-Stage</td>
+                <td>40.53</td>
+                <td>37.71</td>
+                <td>30.63</td>
+                <td>25.71</td>
+                <td>15.94</td>
+                <td>13.99</td>
+                <td>160</td>
+              </tr>
+              <tr>
+                <td>MVT</td>
+                <td>CVPR-2022</td>
+                <td>Two-Stage</td>
+                <td>45.12</td>
+                <td>42.40</td>
+                <td>35.03</td>
+                <td>21.65</td>
+                <td>13.17</td>
+                <td>11.71</td>
+                <td>242</td>
+              </tr>
+              <tr>
+                <td>3DJCG</td>
+                <td>CVPR-2022</td>
+                <td>Two-Stage</td>
+                <td>50.47</td>
+                <td>47.47</td>
+                <td>38.85</td>
+                <td>27.82</td>
+                <td>16.87</td>
+                <td>15.40</td>
+                <td>161</td>
+              </tr>
+              <tr>
+                <td>BUTD-DETR</td>
+                <td>ECCV-2022</td>
+                <td>Two-Stage</td>
+                <td>57.60</td>
+                <td>47.47</td>
+                <td>35.22</td>
+                <td>30.81</td>
+                <td>11.66</td>
+                <td>14.80</td>
+                <td>252</td>
+              </tr>
+              <tr>
+                <td>EDA</td>
+                <td>CVPR-2023</td>
+                <td>Two-Stage</td>
+                <td>55.91</td>
+                <td>47.28</td>
+                <td>34.32</td>
+                <td>31.44</td>
+                <td>11.18</td>
+                <td>15.00</td>
+                <td>291</td>
+              </tr>
+              <tr>
+                <td>3D-SPS</td>
+                <td>CVPR-2022</td>
+                <td>One-Stage</td>
+                <td>44.47</td>
+                <td>42.40</td>
+                <td>30.43</td>
+                <td>28.01</td>
+                <td>18.20</td>
+                <td>15.78</td>
+                <td>130</td>
+              </tr>
+              <tr>
+                <td>BUTD-DETR*</td>
+                <td>ECCV-2022</td>
+                <td>One-Stage</td>
+                <td>56.66</td>
+                <td>45.12</td>
+                <td>33.52</td>
+                <td>32.46</td>
+                <td>12.82</td>
+                <td>15.96</td>
+                <td>138</td>
+              </tr>
+              <tr>
+                <td>EDA*</td>
+                <td>CVPR-2023</td>
+                <td>One-Stage</td>
+                <td>57.41</td>
+                <td>45.59</td>
+                <td>34.03</td>
+                <td>29.32</td>
+                <td>12.25</td>
+                <td>14.41</td>
+                <td>154</td>
+              </tr>
+              <tr>
+                <td>Ours</td>
+                <td>–</td>
+                <td>One-Stage</td>
+                <td>62.01</td>
+                <td>54.97</td>
+                <td>38.77</td>
+                <td>38.89</td>
+                <td>18.42</td>
+                <td>19.47</td>
+                <td>151</td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <div class="content has-text-justified">
+          </div>
+        </div>
+      </div>
+      <!--/ Method. -->
+    </div>
+  </section>
+
+  <!-- <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3"> The gallery of our results</h2>
+          <img src="./static/LIPD_pic/gallery.png" style="display: block; margin: 0 auto; ">
+          <div class="content has-text-justified">
+            <p>
+          
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+
+  <!-- show bibtex -->
+  <!-- <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{xu2023human,
+        title={Human-centric Scene Understanding for 3D Large-scale Scenarios},
+        author={Xu, Yiteng and Cong, Peishan and Yao, Yichen and Chen, Runnan and Hou, Yuenan and Zhu, Xinge and He, Xuming and Yu, Jingyi and Ma, Yuexin},
+        journal={arXiv preprint arXiv:2307.14392},
+        year={2023}
+</code></pre>
+    </div>
+  </section> -->
+
+
+  <!-- show license -->
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <!-- <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a> -->
+      </div>
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This website is licensed under a <a rel="license"
+                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                Commons Attribution-ShareAlike 4.0 International License</a>.
+            </p>
+            <p>
+              Website source code based on the <a href="https://nerfies.github.io">Nerfies</a> project page.
+              If you want to reuse their <a href="https://github.com/nerfies/nerfies.github.io">source code</a> , please
+              credit them appropriately.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
