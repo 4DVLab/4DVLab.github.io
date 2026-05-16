@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-PORT="${1:-8000}"
+PORT="${1:-8001}"
 PROJECT_ROOT="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
 
 cd "$PROJECT_ROOT" || exit 1
